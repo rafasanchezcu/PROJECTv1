@@ -1,0 +1,65 @@
+
+<!--el ng-app hace posible consultar el scrip connection y traer la funcion Ruta-->
+<html lang="es">
+  <head>
+    <title>SIGMAT</title>
+    <meta charset="UTF-8"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"> </script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <link href="styles/style.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <section>
+      <div id="map"></div>
+      <div id="map-zoom-in"></div>
+      <div id="map-zoom-out"></div>
+      <div id="izquierda">
+        <div class="abajo">
+          <select id="lista">
+            <option value="-1" selected="">Seleccione la velocidad de actualizacion</option>
+            <option value="1">Tiempo real (cada 3.5 segundos)</option>
+            <option value="2">Rapido (cada segundo)</option>
+            <option value="3">Lento (cada 5 segundos)</option>
+          </select>
+          <div class="tabs_links"><a href="#BRT-1">RUTA 1</a><a href="#BRT-2">RUTA 2</a><a href="#BRT-3">RUTA 3</a><a href="#BRT-4">RUTA 4</a></div>
+          <div class="tabs_contens">
+            <div id="BRT-1" class="items">
+              <div id="container"></div>
+            </div>
+            <div id="BRT-2" class="items">
+              <P>IINFO RUTA 2</P>
+            </div>
+            <div id="BRT-3" class="items">
+              <P>IINFO RUTA 3</P>
+            </div>
+            <div id="BRT-4" class="items">
+              <P>IINFO RUTA 4</P>
+            </div>
+          </div>
+        </div>
+        <!--ng-controller="Ruta" permite acceder a la funcion en el connection.js-->
+        <!--.arriba(ng-app="myApp")
+        table(ng-controller="FirstCtrl")
+          tr
+            th Nombre
+            th latitud
+            th longitud
+          tr(ng-repeat="reg in coordenadas")
+            td {{reg.Nombre}}
+            td {{reg.latitud}}
+            td {{reg.longitud}}
+            
+          p the id
+        accedemos a los campos de objeto almacenado en el archivo json
+        spam {{coordenadas[2].Nombre}} 
+        p the is 
+        spam {{coordenadas}}
+        -->
+        <script src="scripts/map.js"></script>
+        <script src="controller/connection.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGeiXByYhldiT7SRt5xKIcz3s3k_a6jjM&amp;callback=initMap" async="async" defer="defer"></script>
+      </div>
+    </section>
+  </body>
+</html>
