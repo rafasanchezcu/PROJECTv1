@@ -1,14 +1,214 @@
+//google map custom marker icon - .png fallback for IE11
+var marker_bus0 = 'img/busmorado.svg',
+  	marker_bus1 = 'img/busnaranja.svg',
+  	marker_bus2 = 'img/busverde.svg',
+  	marker_estacion = 'img/busestacionazul.svg';
+
+//codigo encargado de crear la grafica
+
+ $('#container').highcharts({
+     chart: {
+         type: 'bar'
+     },
+     title: {
+         text: 'Contraste de hipóstesis ideal'
+     },
+     xAxis: {
+         categories: ['Hipótesis ideal', 'Simulación 1<br>Hora salida: 6:00', 'Simulación 2<br>Hora salida: 6:10']
+     },
+     yAxis: {
+         min: 0,
+         title: {
+             text: 'Tiempo total de recorrido [s]'
+         }
+     },
+     legend: {
+         reversed: true
+     },
+     plotOptions: {
+         series: {
+             stacking: 'normal'
+         }
+     },
+     series: [{
+
+         name: 'Estación diamante',
+         data: [10,0,0]
+       },{
+
+         name: 'Estación diamante',
+         data: [10,0,0]
+       },{
+
+         name: 'Estación diamante',
+         data: [10,0,0]
+       },{
+
+         name: 'Estación diamante',
+         data: [10,0,0]
+       },{
+
+         name: 'Estación diamante',
+         data: [10,0,0]
+       },{
+
+         name: 'Estación diamante',
+         data: [10,0,0]
+       },{
+
+         name: 'Estación diamante',
+         data: [5,0,0]
+       },{
+
+         name: 'Estación diamante',
+         data: [10,0,0]
+       },{
+
+         name: 'Estación diamante',
+         data: [5,0,0]
+       },{
+
+         name: 'Estación diamante',
+         data: [5,0,0]
+       },{
+
+         name: 'Estación diamante',
+         data: [5,0,0]
+       },
+
+
+
+
+     {
+
+         name: 'Estación diamante',
+         data: [5,0,0]
+       },{
+       	color: '#00FF00',
+         name: 'Hacia estación diamante',
+         data: [10,0,0]
+       },{
+         name: 'Estación provenza',
+         data: [5,0,0]
+       },{
+       	color: '#00FF00',
+         name: 'Hacia estación provenza',
+         data: [10,0,0]
+       },{
+       	 color: '#8A0868',
+         name: 'Estación payador',
+         data: [5,0,0]
+       },{
+       	color: '#00FF00',
+         name: 'Hacia estación payador',
+         data: [15,0,0]
+       },{
+       	   color: '#0000FF',
+           name: 'Estación cañaveral',
+           data: [5, 0,0]
+       },{
+       	color: '#00FF00',  
+           name: 'Hacia estación cañaveral',
+           data: [10, 0,0]
+       },{
+       	   color: '#B40404',  
+           name: 'Estación lagos',
+           data: [10, 0, 0]
+       }]
+ });
+
+var chart = $('#container').highcharts();
+
+//Patron factory implementado para crear los marker en el mapa
+function markerPaqueteFactory(){
+    this.crearPaqueteMarker = function(type,map,n){
+        switch (type) {
+        	case "estacion":
+						console.log("Se creo un marker para una estacion");
+						return markerEstacion(map,n);
+						break;
+					case "T1":
+						console.log("Se creo un recorrido de la ruta T1");
+            console.log(paqueteMarkerT1(map,n));
+						return paqueteMarkerT1(map,n);
+        		break;
+					case "R2":
+						console.log("Se creo un recorrido de la ruta R2");
+						return paqueteMarkerR2(map,n);
+        		break;
+					case "R3":
+						console.log("Se creo un recorrido de la ruta R3");
+						return paqueteMarkerR3(map,n);
+        		break;
+        	default:
+        		console.log("Nombre de la Ruta no esta definido en la funcion markerPaqueteFactory()");
+        }
+    }
+    function markerEstacion(map,n){
+      var R=[];
+      for (var i = 0; i < n; i++) {
+        R.push(new google.maps.Marker({
+            map: map,
+            icon: marker_estacion,
+  					zIndex: 2,
+          }));
+      }
+			return R;
+    }
+		function paqueteMarkerR1(map,n) {
+      var R=[];
+      for (var i = 0; i < n; i++) {
+        R.push(new google.maps.Marker({
+            map: map,
+            icon: marker_bus0,
+          }));
+      }
+      return R;
+		}
+		function paqueteMarkerR2(map,n) {
+      var R=[];
+      for (var i = 0; i < n; i++) {
+        R.push(new google.maps.Marker({
+            map: map,
+            icon: marker_bus1,
+          }));
+      }
+      return R;
+		}
+		function paqueteMarkerR3(map,n) {
+      var R=[];
+      for (var i = 0; i < n; i++) {
+        R.push(new google.maps.Marker({
+            map: map,
+            icon: marker_bus2,
+          }));
+      }
+      return R;
+		}
+};
+ // fin del Patron factory
+
+ var linksp = $(".tabs_links");
+ var links = linksp.find('a');
+ var items = $('.items');
+ links.eq(0).add(items.eq(0)).addClass("active");
+ linksp.on('click','a',function() {
+   var t =$(this);
+   var i = t.index();
+   t.add(items.eq(i)).addClass('active').siblings().removeClass('active');
+ });
+
+
+
+
+
 function initMap() {
 	//set your google maps parameters
 	var latitude = 7.09,
 		longitude = -73.11,
-		map_zoom = 13;
+		map_zoom = 14;
 
-	//google map custom marker icon - .png fallback for IE11
-	var marker_bus0 = 'img/busmorado.svg';
-	var marker_bus1 = 'img/busnaranja.svg';
-	var marker_bus2 = 'img/busverde.svg';
-	var marker_estacion = 'img/busestacionazul.svg';
+
 	//define the basic color of your map, plus a value for saturation and brightness
 	var	main_color = '#2d313f',
 		saturation_value= -20,
@@ -202,35 +402,37 @@ function initMap() {
 
 
 
-	 var estaciones1 = function(lat,lon) {
-	 		var marker = new google.maps.Marker({
-	 				position: new google.maps.LatLng(lat,lon),
-	 				map: map,
-	 				visible: true,
-	 			icon: marker_estacion,
-				zIndex: 2
-	 		});
-			return marker;
-	 	};
+	//creando una instancia de factory, para crear a partir de ella indefinidos marker de estaciones y rutas
+  var factory = new markerPaqueteFactory();
+  //funcion encargada de colocar los marcadores de todas las estaciones sobre el mapa
+  function graficarEstaciones(arrayEstaciones,map) {
+    //creamos un paquete de Marker
+   	 var m=factory.crearPaqueteMarker("estacion",map,arrayEstaciones.length);
+     for (var i = 0; i < arrayEstaciones.length; i++) {
+				 m[i].setPosition(new google.maps.LatLng(arrayEstaciones[i].latitud,arrayEstaciones[i].longitud));
+         infoW(arrayEstaciones[i].Nombre,m[i]);
+     }
+  }
 
+  $.getJSON("http://localhost:8080/docs/api/ProjectSIGMAT/data/coordenadas.json", function(datos) {
+     $.coordenadas=datos;
+     graficarEstaciones(datos,map);
+       })
 
+//agrega un mensaje al
+function infoW(texto,marker) {
+	var infowindow = new google.maps.InfoWindow({
+		content:texto
+		});
+		google.maps.event.addListener(marker, 'click', function() {
+			infowindow.open(map,marker);
+			});
+}
 
-		function infoW(texto,marker) {
-			var infowindow = new google.maps.InfoWindow({
-				content:texto
-				});
-				google.maps.event.addListener(marker, 'click', function() {
-
-					infowindow.open(map,marker);
-			    });
-		}
-
-
-		var infowindow = new google.maps.InfoWindow({
+	//cuadro de informacion al hacer click en el marcado, para informacion dinamica con un solo cuadro
+	var infowindow = new google.maps.InfoWindow({
 			content:null
 			});
-
-
 	function infoWD(texto,marker) {
 	 infowindow.setContent(texto)
 
@@ -239,41 +441,17 @@ function initMap() {
 	    });
 }
 
-$.getJSON("http://localhost:8080/docs/api/ProjectSIGMAT-master/data/coordenadas.json", function(datos) {
-		$.coordenadas=datos;
-		graficarEstaciones(datos);
-      })
-
-	function graficarEstaciones(arrayEstaciones) {
-			for (var i = 0; i < arrayEstaciones.length; i++) {
-				  infoW(arrayEstaciones[i].Nombre,estaciones1(arrayEstaciones[i].latitud,arrayEstaciones[i].longitud));
-			}
-	}
-
-		//add a custom marker to the map
-		var marker1 = new google.maps.Marker({
-		  	position: null,
-		    map: map,
-		    visible: true,
-		 	icon: marker_bus1,
-		});
-		var marker2 = new google.maps.Marker({
-		  	position: null,
-		    map: map,
-		    visible: true,
-		 	icon: marker_bus1,
-		});
-
-		var ruta = function(lat,lon,marker) {
-			var pos = new google.maps.LatLng(lat,lon);
-			marker.setPosition(pos);
-			};
 
 
 
 
 
 
+
+
+
+/*
+//marcador para capturar coordenadas
  function openInfoWindow(marker10) {
     var markerLatLng = marker10.getPosition();
     infoWindow1.setContent([
@@ -298,69 +476,69 @@ infoWindow1 = new google.maps.InfoWindow();
  google.maps.event.addListener(marker10, 'click', function(){
         openInfoWindow(marker10);
     });
+*/
 
-timer=setInterval(asi,1000)
+var R2=factory.crearPaqueteMarker("R2",map,5);
 
+timer=setInterval(asi,1000);
+var b=0;
+//variable para almacenar valores de posicion conceptual y poder saber si ubo un camio de posicion
+var ant=[];
 function asi() {
-
-
-		$.getJSON("http://localhost:8080/docs/api/ProjectSIGMAT-master/data/ruta2.json", function(datos) {
+		$.getJSON("http://localhost:8080/docs/api/ProjectSIGMAT/data/ruta1.json", function(datos) {
 				$.coordenadas=datos;
+        //if para resetear la b cuando se llegue al final de la prueba
+				if(b<datos[0].coordenadas.length)
+			  {
+          //recorremos todos los datos de la ruta especifica
+				for (var i = 0; i < datos.length; i++) {
 
-				recorridos(datos[0],marker1);
-				recorridos(datos[1],marker2);
+          if (ant[i]==undefined || (ant[i]-datos[i].coordenadas[b].id)>0 ) {
+            for (var j = 0; j < chart.series.length; j++) {
+              chart.series[j].data[i+1].update(0);
+              }
 
-			})}
+          }
 
-var b=0, g=-20;
+          moverMarker(datos[i].coordenadas[b],R2[i]);
 
-function recorridos(rutas,marker) {
-	switch (rutas.HoraS) {
-		case 0:
-		if(b<rutas.coordenadas.length)
-	  {var c =-rutas.coordenadas[b].id+6;
-			t=b-10*(rutas.coordenadas[b].id-1)+1;
-			//console.log(t);
-			chart.series[c].data[1].update(t);
+					recorridosGrafica(datos[i].coordenadas[b],i);
 
-	 	 ruta(rutas.coordenadas[b].latitud,rutas.coordenadas[b].longitud,marker);
-	 	 infoWD("<p>latitud: "+rutas.coordenadas[b].latitud+"<br>lontitud: "+rutas.coordenadas[b].longitud+"<br>id: "+rutas.coordenadas[b].id+"<br>Hora salida: "+rutas.HoraS+"</p>",marker);
+          ant[i]=datos[i].coordenadas[b].id;
 
-		}
-	  else {
-	  	b=0;
-			for (var i = 0; i < chart.series.length; i++) {
-				chart.series[i].data[1].update(b);
-
-			}
-	  }
-	 			b++
-			break;
-			case 20:
-			if(g<rutas.coordenadas.length && g>=0)
-			{var c =-rutas.coordenadas[g].id+6;
-				t=g-10*(rutas.coordenadas[g].id-1)+1;
-				console.log(g);
-
-				chart.series[c].data[2].update(t);
-
-		 	 ruta(rutas.coordenadas[g].latitud,rutas.coordenadas[g].longitud,marker);
-		 	 infoWD("<p>latitud: "+rutas.coordenadas[g].latitud+"<br>longtitud: "+rutas.coordenadas[g].longitud+"<br>id: "+rutas.coordenadas[g].id+"<br>Hora salida: "+rutas.HoraS+"</p>",marker);
-
-			}
-		  else {
-		  	if (0>=g) {
-						g++
-		  	}
-					else {
-						g=0;
-						for (var i = 0; i < chart.series.length; i++) {
-							chart.series[i].data[2].update(g);
-					}
+					}	b++
+				}else {
+					b=0
 				}
-		  }
-		 			g++
-				break;
+})};
+
+var moverMarker = function(recorrido,marker) {
+	marker.setPosition(new google.maps.LatLng(recorrido.latitud,recorrido.longitud));
+	};
+
+function recorridosGrafica(rutas,posicion) {
+	switch (posicion) {
+		case 0:
+      //  for (var i = 3; i < rutas.id; i--) {
+      //  console.log(chart.series[3].data[posicion+1].y);
+        //}
+        //a la posicion se le suma uno,
+        //if (cambio) {
+          //for (var i = 0; i < chart.series.length; i++) {
+            //chart.series[i].data[2].update(g);
+          //}else {
+          chart.series[-rutas.id+8].data[posicion+1].update(chart.series[-rutas.id+8].data[posicion+1].y+=1);
+          //}
+
+				//chart.series[-rutas.id+3].data[posicion+1].update+=1;
+        //console.log(chart.series[-rutas.id+3].data[posicion+1].y);
+
+			break;
+		case 1:
+
+				chart.series[-rutas.id+8].data[posicion+1].update(chart.series[-rutas.id+8].data[posicion+1].y+=1);
+
+			break;
 		default:
 
 	}
@@ -374,14 +552,13 @@ var select=$("#lista").change(function() {
 	//tomamos el valor obtenido de la lista desplegable y modificamos el intervalo de tiempo de actualizacion
 	switch (select.val()) {
 		case "1":
-			//actualizacion de 3/5 de segundo
-			timer = setInterval(asi, 2500);
-			break;
-		case "2":
-			//actualizacion de 1 segundo
+			//actualizacion de 1/10 de segundo
+      //Nota: cuando el número es 200 ocurre un erro el cual he solucionado cambiando este número por 100
+      //aunque no aparece el error es aconsesaje realizar mas pruebas
 			timer = setInterval(asi, 1000);
 			break;
-		case "3":
+		
+		case "2":
 			//actualizacion de 5 segundos
 			timer = setInterval(asi, 5000);
 			break;

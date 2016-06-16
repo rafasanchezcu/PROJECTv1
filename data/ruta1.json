@@ -1,0 +1,163 @@
+[{"rutaId":"T1","idBus":"1","placa":"xrt125","nombreConduc":"Pepito perez","HoraS":"6:00","coordenadas":[
+	 {"latitud":7.06699,"longitud":-73.09989,"id":1},
+   {"latitud":7.06734,"longitud":-73.10042,"id":1},
+   {"latitud":7.06769,"longitud":-73.10096,"id":1},
+   {"latitud":7.06821,"longitud":-73.10171,"id":1},
+   {"latitud":7.06857,"longitud":-73.10224,"id":1},
+   {"latitud":7.06907,"longitud":-73.10284,"id":1},
+   {"latitud":7.06969,"longitud":-73.10364,"id":1},
+   {"latitud":7.07025,"longitud":-73.10426,"id":1},
+   {"latitud":7.07062,"longitud":-73.10471,"id":1},
+   {"latitud":7.07101,"longitud":-73.10517,"id":1},
+
+  {"latitud":7.07101,"longitud":-73.10517,"id":2},
+  {"latitud":7.07101,"longitud":-73.10517,"id":2},
+  {"latitud":7.07101,"longitud":-73.10517,"id":2},
+  {"latitud":7.07101,"longitud":-73.10517,"id":2},
+  {"latitud":7.07101,"longitud":-73.10517,"id":2},
+  {"latitud":7.07101,"longitud":-73.10517,"id":2},
+  {"latitud":7.07101,"longitud":-73.10517,"id":2}, 
+  
+
+  {"latitud":7.07141,"longitud":-73.10562,"id":3},
+  {"latitud":7.07179,"longitud":-73.10604,"id":3},
+  {"latitud":7.07213,"longitud":-73.10642,"id":3},
+  {"latitud":7.07249,"longitud":-73.10685,"id":3},
+  {"latitud":7.07284,"longitud":-73.10725,"id":3},
+  {"latitud":7.07344,"longitud":-73.10769,"id":3},
+  {"latitud":7.07394,"longitud":-73.10795,"id":3},
+  {"latitud":7.07528,"longitud":-73.10818,"id":3},
+  {"latitud":7.07649,"longitud":-73.10811,"id":3},
+  {"latitud":7.07765,"longitud":-73.10806,"id":3},
+  {"latitud":7.07899,"longitud":-73.10794,"id":3},
+  {"latitud":7.08082,"longitud":-73.10793,"id":3},
+  {"latitud":7.0824,"longitud":-73.10787,"id":3},
+  {"latitud":7.0837,"longitud":-73.10778,"id":3},
+  {"latitud":7.0846,"longitud":-73.10772,"id":3},
+
+  {"latitud":7.0846,"longitud":-73.10772,"id":4},
+  {"latitud":7.0846,"longitud":-73.10772,"id":4},
+  {"latitud":7.0846,"longitud":-73.10772,"id":4},
+  {"latitud":7.0846,"longitud":-73.10772,"id":4},
+  {"latitud":7.0846,"longitud":-73.10772,"id":4},
+ 
+  {"latitud":7.0851,"longitud":-73.10772,"id":5},
+  {"latitud":7.08579,"longitud":-73.10771,"id":5},
+  {"latitud":7.08659,"longitud":-73.10771,"id":5},
+  {"latitud":7.08722,"longitud":-73.10786,"id":5},
+  {"latitud":7.08794,"longitud":-73.10803,"id":5},
+  {"latitud":7.08855,"longitud":-73.10824,"id":5},
+  {"latitud":7.08919,"longitud":-73.10844,"id":5},
+  {"latitud":7.09045,"longitud":-73.1089,"id":5},
+  {"latitud":7.09088,"longitud":-73.10907,"id":5},
+
+  {"latitud":7.09088,"longitud":-73.10907,"id":6},
+  {"latitud":7.09088,"longitud":-73.10907,"id":6},
+  {"latitud":7.09088,"longitud":-73.10907,"id":6},
+  {"latitud":7.09088,"longitud":-73.10907,"id":6},
+  {"latitud":7.09088,"longitud":-73.10907,"id":6},
+
+
+{"latitud":7.09142,"longitud":-73.10927,"id":7},
+{"latitud":7.09202,"longitud":-73.10948,"id":7},
+{"latitud":7.09251,"longitud":-73.10968,"id":7},
+{"latitud":7.093,"longitud":-73.10982,"id":7},
+{"latitud":7.09342,"longitud":-73.10999,"id":7},
+{"latitud":7.09388,"longitud":-73.11011,"id":7},
+{"latitud":7.09452,"longitud":-73.11028,"id":7},
+{"latitud":7.09501,"longitud":-73.11039,"id":7},
+{"latitud":7.09531,"longitud":-73.11045,"id":7},
+{"latitud":7.09548,"longitud":-73.11048,"id":7},
+
+{"latitud":7.09548,"longitud":-73.11048,"id":8},
+{"latitud":7.09548,"longitud":-73.11048,"id":8}
+
+
+
+ 
+
+
+]
+},
+{"rutaId":"T1","idBus":"2","placa":"xrt125","nombreConduc":"Andres toreto","HoraS":"6:10","coordenadas": [ 
+  {"latitud":7.06679,"longitud":-73.09958,"id":0},
+  {"latitud":7.06679,"longitud":-73.09958,"id":0},
+  {"latitud":7.06679,"longitud":-73.09958,"id":0},
+  {"latitud":7.06679,"longitud":-73.09958,"id":0},
+  {"latitud":7.06679,"longitud":-73.09958,"id":0},
+  {"latitud":7.06679,"longitud":-73.09958,"id":0},
+  {"latitud":7.06679,"longitud":-73.09958,"id":0},
+  {"latitud":7.06679,"longitud":-73.09958,"id":0},
+  {"latitud":7.06679,"longitud":-73.09958,"id":0},
+  {"latitud":7.06679,"longitud":-73.09958,"id":0},
+  
+
+   {"latitud":7.06699,"longitud":-73.09989,"id":1},
+   {"latitud":7.06734,"longitud":-73.10042,"id":1},
+   {"latitud":7.06769,"longitud":-73.10096,"id":1},
+   {"latitud":7.06821,"longitud":-73.10171,"id":1},
+   {"latitud":7.06857,"longitud":-73.10224,"id":1},
+   {"latitud":7.06907,"longitud":-73.10284,"id":1},
+   {"latitud":7.06969,"longitud":-73.10364,"id":1},
+   {"latitud":7.07025,"longitud":-73.10426,"id":1},
+   {"latitud":7.07062,"longitud":-73.10471,"id":1},
+   {"latitud":7.07101,"longitud":-73.10517,"id":1},
+
+  {"latitud":7.07101,"longitud":-73.10517,"id":2},
+  {"latitud":7.07101,"longitud":-73.10517,"id":2},
+  {"latitud":7.07101,"longitud":-73.10517,"id":2},
+  {"latitud":7.07101,"longitud":-73.10517,"id":2}, 
+  {"latitud":7.07101,"longitud":-73.10517,"id":2},
+
+  {"latitud":7.07141,"longitud":-73.10562,"id":3},
+  {"latitud":7.07179,"longitud":-73.10604,"id":3},
+  {"latitud":7.07213,"longitud":-73.10642,"id":3},
+  {"latitud":7.07249,"longitud":-73.10685,"id":3},
+  {"latitud":7.07284,"longitud":-73.10725,"id":3},
+  {"latitud":7.07344,"longitud":-73.10769,"id":3},
+  {"latitud":7.07394,"longitud":-73.10795,"id":3},
+  {"latitud":7.07528,"longitud":-73.10818,"id":3},
+  {"latitud":7.07649,"longitud":-73.10811,"id":3},
+  {"latitud":7.07765,"longitud":-73.10806,"id":3},
+  {"latitud":7.07899,"longitud":-73.10794,"id":3},
+  {"latitud":7.08082,"longitud":-73.10793,"id":3},
+  {"latitud":7.0824,"longitud":-73.10787,"id":3},
+  {"latitud":7.0837,"longitud":-73.10778,"id":3},
+  {"latitud":7.0846,"longitud":-73.10772,"id":3},
+
+  {"latitud":7.0846,"longitud":-73.10772,"id":4},
+  {"latitud":7.0846,"longitud":-73.10772,"id":4},
+  {"latitud":7.0846,"longitud":-73.10772,"id":4},
+  {"latitud":7.0846,"longitud":-73.10772,"id":4},
+  {"latitud":7.0846,"longitud":-73.10772,"id":4},
+  {"latitud":7.0846,"longitud":-73.10772,"id":4},
+
+  {"latitud":7.0851,"longitud":-73.10772,"id":5},
+  {"latitud":7.08579,"longitud":-73.10771,"id":5},
+  {"latitud":7.08659,"longitud":-73.10771,"id":5},
+  {"latitud":7.08722,"longitud":-73.10786,"id":5},
+  {"latitud":7.08794,"longitud":-73.10803,"id":5},
+  {"latitud":7.08855,"longitud":-73.10824,"id":5},
+  {"latitud":7.08919,"longitud":-73.10844,"id":5},
+  {"latitud":7.08979,"longitud":-73.10865,"id":5},
+  {"latitud":7.09045,"longitud":-73.1089,"id":5},
+  {"latitud":7.09088,"longitud":-73.10907,"id":5},
+  
+  {"latitud":7.09088,"longitud":-73.10907,"id":6},
+  {"latitud":7.09088,"longitud":-73.10907,"id":6},
+  {"latitud":7.09088,"longitud":-73.10907,"id":6},
+  {"latitud":7.09088,"longitud":-73.10907,"id":6},
+  {"latitud":7.09088,"longitud":-73.10907,"id":6},
+  {"latitud":7.09088,"longitud":-73.10907,"id":6},
+  {"latitud":7.09088,"longitud":-73.10907,"id":6}
+  
+
+
+
+
+
+
+
+]
+}
+]
