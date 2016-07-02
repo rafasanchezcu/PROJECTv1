@@ -1,123 +1,3 @@
-//google map custom marker icon - .png fallback for IE11
-var marker_bus0 = 'img/busmorado.svg',
-  	marker_bus1 = 'img/busnaranja.svg',
-  	marker_bus2 = 'img/busverde.svg',
-  	marker_estacion = 'img/busestacionazul.svg';
-
-//codigo encargado de crear la grafica
-
- $('#container').highcharts({
-     chart: {
-         type: 'bar'
-     },
-     title: {
-         text: 'Contraste de hipóstesis ideal'
-     },
-     xAxis: {
-         categories: ['Hipótesis ideal', 'Simulación 1<br>Hora salida: 6:00', 'Simulación 2<br>Hora salida: 6:10']
-     },
-     yAxis: {
-         min: 0,
-         title: {
-             text: 'Tiempo total de recorrido [s]'
-         }
-     },
-     legend: {
-         reversed: true
-     },
-     plotOptions: {
-         series: {
-             stacking: 'normal'
-         }
-     },
-     series: [{
-
-         name: 'Estación diamante',
-         data: [10,0,0]
-       },{
-
-         name: 'Estación diamante',
-         data: [10,0,0]
-       },{
-
-         name: 'Estación diamante',
-         data: [10,0,0]
-       },{
-
-         name: 'Estación diamante',
-         data: [10,0,0]
-       },{
-
-         name: 'Estación diamante',
-         data: [10,0,0]
-       },{
-
-         name: 'Estación diamante',
-         data: [10,0,0]
-       },{
-
-         name: 'Estación diamante',
-         data: [5,0,0]
-       },{
-
-         name: 'Estación diamante',
-         data: [10,0,0]
-       },{
-
-         name: 'Estación diamante',
-         data: [5,0,0]
-       },{
-
-         name: 'Estación diamante',
-         data: [5,0,0]
-       },{
-
-         name: 'Estación diamante',
-         data: [5,0,0]
-       },
-
-
-
-
-     {
-
-         name: 'Estación diamante',
-         data: [5,0,0]
-       },{
-       	color: '#00FF00',
-         name: 'Hacia estación diamante',
-         data: [10,0,0]
-       },{
-         name: 'Estación provenza',
-         data: [5,0,0]
-       },{
-       	color: '#00FF00',
-         name: 'Hacia estación provenza',
-         data: [10,0,0]
-       },{
-       	 color: '#8A0868',
-         name: 'Estación payador',
-         data: [5,0,0]
-       },{
-       	color: '#00FF00',
-         name: 'Hacia estación payador',
-         data: [15,0,0]
-       },{
-       	   color: '#0000FF',
-           name: 'Estación cañaveral',
-           data: [5, 0,0]
-       },{
-       	color: '#00FF00',  
-           name: 'Hacia estación cañaveral',
-           data: [10, 0,0]
-       },{
-       	   color: '#B40404',  
-           name: 'Estación lagos',
-           data: [10, 0, 0]
-       }]
- });
-
-var chart = $('#container').highcharts();
 
 //Patron factory implementado para crear los marker en el mapa
 function markerPaqueteFactory(){
@@ -187,19 +67,6 @@ function markerPaqueteFactory(){
 		}
 };
  // fin del Patron factory
-
- var linksp = $(".tabs_links");
- var links = linksp.find('a');
- var items = $('.items');
- links.eq(0).add(items.eq(0)).addClass("active");
- linksp.on('click','a',function() {
-   var t =$(this);
-   var i = t.index();
-   t.add(items.eq(i)).addClass('active').siblings().removeClass('active');
- });
-
-
-
 
 
 function initMap() {
@@ -384,7 +251,7 @@ function initMap() {
 			]
 		}
 	];
-
+ 
 	//set google map options
 	var map_options = {
       	center: new google.maps.LatLng(latitude, longitude),
@@ -397,10 +264,9 @@ function initMap() {
 
       	styles: style,
     }
+
     //inizialize the map
 	var map = new google.maps.Map(document.getElementById('map'), map_options);
-
-
 
 	//creando una instancia de factory, para crear a partir de ella indefinidos marker de estaciones y rutas
   var factory = new markerPaqueteFactory();
@@ -428,7 +294,6 @@ function infoW(texto,marker) {
 			infowindow.open(map,marker);
 			});
 }
-
 	//cuadro de informacion al hacer click en el marcado, para informacion dinamica con un solo cuadro
 	var infowindow = new google.maps.InfoWindow({
 			content:null
@@ -440,43 +305,6 @@ function infoW(texto,marker) {
 	    infowindow.open(map,marker);
 	    });
 }
-
-
-
-
-
-
-
-
-
-
-/*
-//marcador para capturar coordenadas
- function openInfoWindow(marker10) {
-    var markerLatLng = marker10.getPosition();
-    infoWindow1.setContent([
-        '"latitud":',
-        markerLatLng.lat(),
-        ',"longitud":',
-        markerLatLng.lng(),
-        ''
-    ].join(''));
-    infoWindow1.open(map, marker10);
- }
-
-infoWindow1 = new google.maps.InfoWindow();
-
- var marker10 = new google.maps.Marker({
- 		position: new google.maps.LatLng(7.071729,-73.107195),
- 		map: map,
-		draggable: true,
- 		visible: true,
- });
-
- google.maps.event.addListener(marker10, 'click', function(){
-        openInfoWindow(marker10);
-    });
-*/
 
 var R2=factory.crearPaqueteMarker("R2",map,5);
 
@@ -519,61 +347,19 @@ var moverMarker = function(recorrido,marker) {
 function recorridosGrafica(rutas,posicion) {
 	switch (posicion) {
 		case 0:
-      //  for (var i = 3; i < rutas.id; i--) {
-      //  console.log(chart.series[3].data[posicion+1].y);
-        //}
-        //a la posicion se le suma uno,
-        //if (cambio) {
-          //for (var i = 0; i < chart.series.length; i++) {
-            //chart.series[i].data[2].update(g);
-          //}else {
-          chart.series[-rutas.id+8].data[posicion+1].update(chart.series[-rutas.id+8].data[posicion+1].y+=1);
-          //}
-
-				//chart.series[-rutas.id+3].data[posicion+1].update+=1;
-        //console.log(chart.series[-rutas.id+3].data[posicion+1].y);
-
+      
+          chart.series[-rutas.id+18].data[posicion+1].update(chart.series[-rutas.id+18].data[posicion+1].y+=1);
+        
 			break;
 		case 1:
 
-				chart.series[-rutas.id+8].data[posicion+1].update(chart.series[-rutas.id+8].data[posicion+1].y+=1);
+				chart.series[-rutas.id+18].data[posicion+1].update(chart.series[-rutas.id+18].data[posicion+1].y+=1);
 
 			break;
 		default:
 
 	}
-	}
-
-
-//esperamos a que se modifique el valor seleccionado de la lista desplegable y lo capturamos
-var select=$("#lista").change(function() {
-	//detenemos el Intervalo de tiempo de la funcion setInterval
-	clearInterval(timer);
-	//tomamos el valor obtenido de la lista desplegable y modificamos el intervalo de tiempo de actualizacion
-	switch (select.val()) {
-		case "1":
-			//actualizacion de 1/10 de segundo
-      //Nota: cuando el número es 200 ocurre un erro el cual he solucionado cambiando este número por 100
-      //aunque no aparece el error es aconsesaje realizar mas pruebas
-			timer = setInterval(asi, 1000);
-			break;
-		
-		case "2":
-			//actualizacion de 5 segundos
-			timer = setInterval(asi, 5000);
-			break;
-		default:
-			//por defecto el valor es 1 segundo
-			timer = setInterval(asi, 1000);
-	}
-
-});
-
-
-
-
-
-
+}
 
 	//add custom buttons for the zoom-in/zoom-out on the map
 	function CustomZoomControl(controlDiv, map) {
@@ -606,4 +392,28 @@ var select=$("#lista").change(function() {
 
 
 
+
+//esperamos a que se modifique el valor seleccionado de la lista desplegable y lo capturamos
+var select=$("#lista").change(function() {
+	//detenemos el Intervalo de tiempo de la funcion setInterval
+	clearInterval(timer);
+	//tomamos el valor obtenido de la lista desplegable y modificamos el intervalo de tiempo de actualizacion
+	switch (select.val()) {
+		case "1":
+			//actualizacion de 1/10 de segundo
+			timer = setInterval(asi, 1000);
+			break;
+		
+		case "2":
+			//actualizacion de 5 segundos
+			timer = setInterval(asi, 5000);
+			break;
+		default:
+			//por defecto el valor es 1 segundo
+			timer = setInterval(asi, 1000);
+	}
+
+});
+
 }
+
