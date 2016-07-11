@@ -7,7 +7,7 @@ function markerPaqueteFactory(){
 						console.log("Se creo un marker para una estacion");
 						return markerEstacion(map,n);
 						break;
-					case "T1":
+					case "R1":
 						console.log("Se creo un recorrido de la ruta T1");
             console.log(paqueteMarkerT1(map,n));
 						return paqueteMarkerT1(map,n);
@@ -306,7 +306,10 @@ function infoW(texto,marker) {
 	    });
 }
 
-var R2=factory.crearPaqueteMarker("R2",map,5);
+
+// DESDE AQUIIIIIII
+var R2=factory.crearPaqueteMarker("R2",map,5); 
+
 
 timer=setInterval(asi,1000);
 var b=0;
@@ -321,22 +324,20 @@ function asi() {
           //recorremos todos los datos de la ruta especifica
 				for (var i = 0; i < datos.length; i++) {
 
-          if (ant[i]==undefined || (ant[i]-datos[i].coordenadas[b].id)>0 ) {
-            for (var j = 0; j < chart.series.length; j++) {
-              chart.series[j].data[i+1].update(0);
-              }
-
-          }
+       
 
           moverMarker(datos[i].coordenadas[b],R2[i]);
 
-					recorridosGrafica(datos[i].coordenadas[b],i);
+          recorridosGrafica(datos[i].coordenadas[b],i); 
+
+
+          		
 
           ant[i]=datos[i].coordenadas[b].id;
 
 					}	b++
 				}else {
-					b=0
+					ant=[]
 				}
 })};
 
@@ -348,7 +349,7 @@ function recorridosGrafica(rutas,posicion) {
 	switch (posicion) {
 		case 0:
       
-          chart.series[-rutas.id+18].data[posicion+1].update(chart.series[-rutas.id+18].data[posicion+1].y+=1);
+                chart.series[-rutas.id+18].data[posicion+1].update(chart.series[-rutas.id+18].data[posicion+1].y+=1);
         
 			break;
 		case 1:
@@ -356,10 +357,19 @@ function recorridosGrafica(rutas,posicion) {
 				chart.series[-rutas.id+18].data[posicion+1].update(chart.series[-rutas.id+18].data[posicion+1].y+=1);
 
 			break;
+
+		case 2:
+
+				chart.series[-rutas.id+18].data[posicion+1].update(chart.series[-rutas.id+18].data[posicion+1].y+=1);
+
+			break;
+			
+			
 		default:
 
 	}
-}
+};
+
 
 	//add custom buttons for the zoom-in/zoom-out on the map
 	function CustomZoomControl(controlDiv, map) {
@@ -391,29 +401,6 @@ function recorridosGrafica(rutas,posicion) {
 });
 
 
-
-
-//esperamos a que se modifique el valor seleccionado de la lista desplegable y lo capturamos
-var select=$("#lista").change(function() {
-	//detenemos el Intervalo de tiempo de la funcion setInterval
-	clearInterval(timer);
-	//tomamos el valor obtenido de la lista desplegable y modificamos el intervalo de tiempo de actualizacion
-	switch (select.val()) {
-		case "1":
-			//actualizacion de 1/10 de segundo
-			timer = setInterval(asi, 1000);
-			break;
-		
-		case "2":
-			//actualizacion de 5 segundos
-			timer = setInterval(asi, 5000);
-			break;
-		default:
-			//por defecto el valor es 1 segundo
-			timer = setInterval(asi, 1000);
-	}
-
-});
 
 }
 
