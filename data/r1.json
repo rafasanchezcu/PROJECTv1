@@ -1,0 +1,10 @@
+[
+	{"Nombre":"Parque UIS","distancia":0},
+	{"Nombre":"Parque Turbay","distancia":3100},
+  {"Nombre":"Provenza","distancia":6100},
+	{"Nombre":"Payador","distancia":6800},
+	{"Nombre":"Hormigueros","distancia":7400},
+  {"Nombre":"Molinos","distancia":7800},
+	{"Nombre":"Cañaveral","distancia":8700},
+  {"Nombre":"Lagos","distancia":9200}
+]

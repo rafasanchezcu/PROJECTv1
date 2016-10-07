@@ -1,0 +1,182 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400);
+*, *::after, *::before {
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #f2f2f2;
+  font-family: "Roboto Condensed", sans-serif, Arial;
+  font-weight: lighter;
+}
+
+a {
+  text-decoration: none;
+}
+
+.timeline {
+  overflow: hidden;
+  position: relative;
+  height: 5em;
+  width: 95%;
+  max-width: 800px;
+  margin: 0 auto;
+  background: #f2f2f2;
+}
+
+.line {
+  /* this is the grey line/timeline */
+  position: relative;
+  height: 100%;
+  margin: 0 40px;
+  overflow: hidden;
+  /* width will be set using JavaScript */
+  background: #fdfdfd;
+}
+.line::after, .line::before {
+  /* these are used to create a shadow effect at the sides of the timeline */
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  height: 100%;
+  width: 20px;
+}
+.line::before {
+  left: 0;
+  background-image: -webkit-linear-gradient( left , #f8f8f8, rgba(248, 248, 248, 0));
+  background-image: linear-gradient(to right, #f8f8f8, rgba(248, 248, 248, 0));
+}
+.line::after {
+  right: 0;
+  background-image: -webkit-linear-gradient( right , #f8f8f8, rgba(248, 248, 248, 0));
+  background-image: linear-gradient(to left, #f8f8f8, rgba(248, 248, 248, 0));
+}
+
+.linei {
+  /* this is the grey line/timeline */
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 1.44em;
+  height: 2px;
+  width: 1000px;
+  /* width will be set using JavaScript */
+  background: #c5c5c5;
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  transition: transform 0.4s;
+}
+.linei li {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  text-align: center;
+  font-size: 1em;
+  padding-top: 20px;
+  color: #333333;
+  top: 0;
+  /* fix bug on Safari - text flickering while timeline translates */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.linei li::before {
+  /* this is used to create the event spot */
+  content: "";
+  position: absolute;
+  left: 50%;
+  right: auto;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: 0.7em;
+  height: 1em;
+  width: 1em;
+  border-radius: 50%;
+  border: 2px solid #d8d8d8;
+  background-color: #7c4dff;
+  z-index: 100;
+  -webkit-transition: background-color 0.3s, border-color 0.3s;
+  -moz-transition: background-color 0.3s, border-color 0.3s;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.mover a {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 50px;
+  width: 40px;
+  /* replace text with an icon */
+  overflow: hidden;
+  color: transparent;
+  text-indent: 100%;
+  white-space: nowrap;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+.mover a::after {
+  /* arrow icon */
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 25px;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url(../img/right-chevron.svg) no-repeat 0 0;
+  -webkit-transform: translateX(-40%) translateY(-50%) rotate(180deg);
+  -moz-transform: translateX(-40%) translateY(-50%) rotate(180deg);
+  -ms-transform: translateX(-40%) translateY(-50%) rotate(180deg);
+  -o-transform: translateX(-40%) translateY(-50%) rotate(180deg);
+  transform: translateX(-40%) translateY(-50%) rotate(180deg);
+}
+.mover a.prev {
+  left: 0;
+}
+.mover a.next {
+  right: 0;
+  -webkit-transform: translateY(-50%) rotate(180deg);
+  -moz-transform: translateY(-50%) rotate(180deg);
+  -ms-transform: translateY(-50%) rotate(180deg);
+  -o-transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-50%) rotate(180deg);
+}
+.mover a:hover {
+  background: #d4d4d4;
+}
+.mover a .no-touch:hover {
+  background-position: 0 -30px;
+  border-color: #4dd49a;
+}
+.mover a.inactive {
+  pointer-events: none;
+}
+.mover a.inactive::after {
+  background-position: 0 -30px;
+}
+.mover a.inactive .no-touch:hover {
+  border-color: #dfdfdf;
+}

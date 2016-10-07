@@ -55,42 +55,9 @@ body, html {
 section {
   display: flex;
 }
-section #map, section #izquierda {
-  width: 50%;
-  height: 100vh;
-}
-section #izquierda {
-  box-shadow: -10px -2px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.4);
-  z-index: 100;
-  background: #fdfdfd;
-}
-section #izquierda .abajo {
+section #map {
   width: 100%;
   height: 100vh;
-  overflow: auto;
-}
-section #izquierda .abajo #lista {
-  margin: auto;
-  align-content: center;
-}
-section #izquierda .abajo p {
-  font-size: 1em;
-}
-section #izquierda .arriba {
-  overflow: auto;
-  background: rgba(255, 255, 255, 0.8);
-}
-section #izquierda .arriba table {
-  width: 70%;
-  border-collapse: collapse;
-  border-spacing: 0;
-  margin: auto;
-  text-align: left;
-}
-section #izquierda .arriba table td, section #izquierda .arriba table th {
-  padding: 15px 5px;
-  border: 0;
-  border-bottom: 1px solid #a6a6a6;
 }
 
 #map-zoom-in, #map-zoom-out {

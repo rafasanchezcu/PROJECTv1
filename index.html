@@ -2,71 +2,32 @@
 <!--el ng-app hace posible consultar el scrip connection y traer la funcion Ruta-->
 <html lang="es">
   <head>
-    <title>TransMilinea</title>
+    <title>SIGMAT</title>
     <meta charset="UTF-8"/>
-    <script src="librerias/jquery-2.2.4.min.js"></script>
-    <script src="librerias/angular.min.js"> </script>
-    <script src="librerias/highcharts.js"></script>
-    <link href="styles/style.css" rel="stylesheet"/>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGeiXByYhldiT7SRt5xKIcz3s3k_a6jjM&amp;"></script>
+    <script src="lib/jquery-2.2.4.min.js"></script>
+    <script src="lib/angular.min.js"> </script>
+    <link href="css/style.css" rel="stylesheet"/>
   </head>
-
   <body>
-
-
     <section>
-
-  
       <div id="map"></div>
       <div id="map-zoom-in"></div>
       <div id="map-zoom-out"></div>
       <div id="izquierda">
-     
-   
-          
-   <div>
-
-
-       
-          
-
-          <div class="tabs_links">
-          <a href="#BRT-1">RUTA T1</a>
-          <a href="#BRT-2">RUTA T3</a>
-          <a href="#BRT-3">RUTA P1</a>
-          <a href="#BRT-4">RUTA P3</a>
-          <a href="#BRT-5">RUTA P6</a>
-          <a href="#BRT-6">RUTA RE1</a>
-          <a href="#BRT-7">RUTA AP3</a>
-          <a href="#BRT-8">RUTA AP5</a>
-          </div>
-          
-          <div class="tabs_contens">
-            <div id="BRT-1" class="items">
-              <div  id="container"></div>
-         </div>
-
-          <div id="BRT-2" class="items">
-
-          </div>
-
-
-            <div id="BRT-3" class="items">
-              <P>3</P>
-            </div>
-            
-            <div id="BRT-4" class="items">
-              <P>4</P>
-            </div>
-          </div>
-</div>
-
-
-
-        <script src="scripts/grafica.js"></script>
-        <script src="scripts/map.js"></script>
-        <script src="controller/connection.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGeiXByYhldiT7SRt5xKIcz3s3k_a6jjM&amp;callback=initMap" async="async" defer="defer"></script>
-  
+        <div class="abajo">
+          <select id="lista">
+            <option value="-1" selected="">Seleccione la velocidad de actualizacion</option>
+            <option value="1">Tiempo real (cada 0.1 segundos)</option>
+            <option value="2">Rapido (cada segundo)</option>
+            <option value="3">Lento (cada 5 segundos)</option>
+          </select><br/>
+          <button onClick="window.location.href='view/r1.html'" id="btn0">ruta 1</button><br/>
+          <button onClick="window.location.href='view/multiplesRutas.html'" id="btn1">multiples rutas simulneamente</button>
+        </div>
+      </div>
     </section>
+    <script src="js/map.js"></script>
+    <script src="controller/connection.js"></script>
   </body>
 </html>

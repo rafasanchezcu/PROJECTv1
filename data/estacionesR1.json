@@ -1,0 +1,10 @@
+[
+	{"Nombre":"Estacion 1","distancia":0},
+	{"Nombre":"Estacion 2","distancia":3100},
+  {"Nombre":"Estacion 3","distancia":6100},
+	{"Nombre":"Estacion 4","distancia":6800},
+	{"Nombre":"Estacion 5","distancia":7400},
+  {"Nombre":"Estacion 6","distancia":7800},
+	{"Nombre":"Estacion 7","distancia":8700},
+  {"Nombre":"Estacion 8","distancia":9200}
+]

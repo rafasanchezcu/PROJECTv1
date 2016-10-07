@@ -1,0 +1,324 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400);
+*, *::after, *::before {
+  list-style: none;
+  box-sizing: border-box;
+}
+
+.datos {
+  position: absolute;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding: 10px;
+}
+
+.nombreRuta {
+  font-family: "Roboto Condensed", sans-serif, Arial;
+  font-weight: lighter;
+  position: absolute;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin-left: 3%;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #f2f2f2;
+  font-family: "Roboto Condensed", sans-serif, Arial;
+  font-weight: lighter;
+  background-color: #fdfdfd;
+}
+
+a {
+  text-decoration: none;
+}
+
+.timeline, .timeline0, .timelineM {
+  overflow: hidden;
+  position: relative;
+  transition: all 1s;
+  height: 5em;
+}
+
+.timeline0 {
+  width: calc(100% + 16px);
+}
+
+.timeline, .timelineM {
+  width: 100%;
+}
+
+.caja {
+  height: calc(100% - 76.66px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin-bottom: 10px;
+  width: 95%;
+  width: 100%;
+}
+
+.cajaP {
+  width: 95%;
+  margin: auto;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  margin-top: 10px;
+  height: 90vh;
+}
+
+.cajaR0, .cajaR1, .cajaR2, .cajaR3, .cajaR4 {
+  width: 95%;
+  margin: auto;
+  margin-bottom: 10px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.line {
+  /* this is the grey line/timeline */
+  position: relative;
+  height: 100%;
+  margin: 0 100px;
+  overflow: hidden;
+  /* width will be set using JavaScript */
+  background: #fdfdfd;
+}
+.line::after, .line::before {
+  /* these are used to create a shadow effect at the sides of the timeline */
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  height: 100%;
+  width: 20px;
+}
+.line::before {
+  left: 0;
+  background-image: -webkit-linear-gradient( left , #f8f8f8, rgba(248, 248, 248, 0));
+  background-image: linear-gradient(to right, #f8f8f8, rgba(248, 248, 248, 0));
+}
+.line::after {
+  right: 0;
+  background-image: -webkit-linear-gradient( right , #f8f8f8, rgba(248, 248, 248, 0));
+  background-image: linear-gradient(to left, #f8f8f8, rgba(248, 248, 248, 0));
+}
+
+.linei {
+  /* this is the grey line/timeline */
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 1.44em;
+  height: 2px;
+  width: 100%;
+  /* width will be set using JavaScript */
+  background: #c5c5c5;
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  transition: transform 0.4s;
+}
+
+.bus {
+  position: absolute;
+  top: -2em;
+  background: url(../img/bus-markerm.svg);
+  background-size: cover;
+  width: 2em;
+  height: 2em;
+  z-index: 102;
+  transition: left 1s linear;
+}
+
+.estacion1 {
+  position: absolute;
+  top: -2em;
+  z-index: 3;
+}
+.estacion1::before {
+  /* this is used to create the event spot */
+  content: "";
+  position: absolute;
+  left: 50%;
+  right: auto;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  top: -2em;
+  width: 2px;
+  height: 120px;
+  background: #5918e5;
+}
+.estacion1::after {
+  content: "";
+  position: absolute;
+  top: 1.7em;
+  left: 50%;
+  right: auto;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 0.7em;
+  height: 0.7em;
+  border-radius: 100%;
+  background: #4bb68b;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.estacion {
+  position: absolute;
+  top: -2em;
+  z-index: 2;
+  text-align: center;
+  font-size: 1em;
+  color: #333333;
+  width: 120px;
+  /* fix bug on Safari - text flickering while timeline translates */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.estacion::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  right: auto;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 2px;
+  top: 2em;
+  height: 50px;
+  background-color: #5918e5;
+  z-index: 100;
+}
+.estacion::before {
+  /* this is used to create the event spot */
+  content: "";
+  position: absolute;
+  left: 50%;
+  right: auto;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  top: 1.5em;
+  height: 1em;
+  width: 1em;
+  border-radius: 50%;
+  border: 2px solid #d8d8d8;
+  background-color: #5918e5;
+  z-index: 101;
+  box-shadow: 0px 0px 0px 2px #5918e5;
+  -webkit-transition: background-color 0.3s, border-color 0.3s;
+  -moz-transition: background-color 0.3s, border-color 0.3s;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.lineT {
+  position: absolute;
+  background-color: transparent;
+  /* this is the grey line/timeline */
+  position: absolute;
+  z-index: 2;
+  top: -1px;
+  height: 3px;
+  width: 0px;
+  transition: all 1.5s;
+  cursor: default;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.activate {
+  cursor: pointer;
+}
+
+.mover a {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 50px;
+  width: 40px;
+  /* replace text with an icon */
+  overflow: hidden;
+  color: transparent;
+  text-indent: 100%;
+  white-space: nowrap;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+.mover a::after {
+  /* arrow icon */
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 25px;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url(../svg/right-chevron.svg) no-repeat 0 0;
+  -webkit-transform: translateX(-40%) translateY(-50%) rotate(180deg);
+  -moz-transform: translateX(-40%) translateY(-50%) rotate(180deg);
+  -ms-transform: translateX(-40%) translateY(-50%) rotate(180deg);
+  -o-transform: translateX(-40%) translateY(-50%) rotate(180deg);
+  transform: translateX(-40%) translateY(-50%) rotate(180deg);
+}
+.mover a.prev {
+  left: 60px;
+}
+.mover a.next {
+  right: 60px;
+  -webkit-transform: translateY(-50%) rotate(180deg);
+  -moz-transform: translateY(-50%) rotate(180deg);
+  -ms-transform: translateY(-50%) rotate(180deg);
+  -o-transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-50%) rotate(180deg);
+}
+.mover a:hover {
+  background: #d4d4d4;
+}
+.mover a .no-touch:hover {
+  background-position: 0 -30px;
+  border-color: #4dd49a;
+}
+.mover a.inactive {
+  pointer-events: none;
+}
+.mover a.inactive::after {
+  background-position: 0 -30px;
+}
+.mover a.inactive .no-touch:hover {
+  border-color: #dfdfdf;
+}

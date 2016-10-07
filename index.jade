@@ -1,0 +1,39 @@
+//el ng-app hace posible consultar el scrip connection y traer la funcion Ruta
+html(lang="es") 
+  head
+    title SIGMAT
+    meta(charset="UTF-8")
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGeiXByYhldiT7SRt5xKIcz3s3k_a6jjM&" )
+    script(src="lib/jquery-2.2.4.min.js")
+    script(src="lib/angular.min.js")  
+    link(href="css/style.css",rel="stylesheet")
+
+    
+  body
+    section
+      #map
+      #map-zoom-in
+      #map-zoom-out
+      #izquierda
+        .abajo
+          select#lista
+            option(value="-1" selected="") Seleccione la velocidad de actualizacion
+            option(value="1") Tiempo real (cada 0.1 segundos)
+            option(value="2") Rapido (cada segundo)
+            option(value="3") Lento (cada 5 segundos)
+          br
+          button(onClick="window.location.href='view/r1.html'")#btn0 ruta 1
+          br
+          button(onClick="window.location.href='view/multiplesRutas.html'")#btn1 multiples rutas simulneamente
+              
+    script(src="js/map.js")
+    script(src="controller/connection.js")
+        
+        
+              
+        
+                
+          
+    
+      
+      
