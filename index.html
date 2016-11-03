@@ -13,11 +13,13 @@
     <link href="css/style.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
   </head>
-<body>
 
+
+ <body>
   <section>
     <div class="izquierda">
         <div class="bloqueO">
+
           <div class="bloque0">
             <div class="caja1"></div>
             <div class="caja2">
@@ -25,15 +27,84 @@
             </div>
           </div>
 
-        
-        
+          <div class="bloque1">
+               <a class="modal-trigger waves-effect waves-light btn" href="#modal1"><i class="material-icons left">room</i>Monitoreo</a>
+               <a href="#modal2" class="waves-effect waves-light btn modal-trigger"><i class="material-icons left">assessment</i>Tablas</a>
+          </div>
+ 
+          <div class="bloque2">
+            <div class="caja1">
+              <div class="input-field">
+                <select class="multiple">
+                  <option value="" disabled="" select="">Seleccione Carrera</option>
+                </select>
+                <label>Inicie Monitoreo </label>
+              </div>
+            </div>
+          </div>
 
-        <div class="bloque1">
-      
+          <div class="bloque3">
+            <p>Rutas</p>
+            <p>Hide/<b>View</b></p>
+          </div>
 
-          <a class="modal-trigger waves-effect waves-light btn" href="#modal1"><i class="material-icons left">room</i>Monitoreo</a>
+           <div class="bloque4">
+             <div class="caja3">
+                <div class="logo">R1</div>
+                <div class="texto">hola</div>
+              <div class="switch right-align">
+                <label>
+                  <input type="checkbox"/><span class="lever"></span>
+                </label>
+              </div>
+             </div>
 
-          <div id="modal1" class="modal modal-fixed-footer">
+            <div class="caja3">
+                <div class="logo">R2</div>
+                <div class="texto">hola</div>
+              <div class="switch right-align">
+                <label>
+                  <input type="checkbox"/><span class="lever"></span>
+                </label>
+              </div>
+            </div>
+
+            <div class="caja3">
+                <div class="logo">R3</div>
+                <div class="texto">hola</div>
+              <div class="switch right-align">
+                <label>
+                  <input type="checkbox"/><span class="lever"></span>
+                </label>
+              </div>
+            </div>
+
+            <div class="caja3">
+                <div class="logo">R4</div>
+                <div class="texto">hola</div>
+              <div class="switch right-align">
+                <label>
+                  <input type="checkbox"/><span class="lever"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="bloque5">
+            <select id="lista">
+              <option value="-1" selected="">S. Velocidad De Actualizacion</option>
+              <option value="1">Tiempo real (cada 0.1 segundos)</option>
+              <option value="2">Rapido (cada segundo)</option>
+              <option value="3">Lento (cada 5 segundos)</option>
+            </select><br/>
+          </div>
+
+    </div>
+        <div class="flecha z-depth-4"><a> < </a></div>
+    </div>
+
+    <!-- DIV PARA LAS VENTANAS MODALES -->
+       <div id="modal1" class="modal modal-fixed-footer">
             <div class="modal-content">
               <h4>TITULO DE LA MODAL LINEA DE TIEMPO</h4>
               <p>HOLA MUNDO PRUEBAS CON VENTANAS MODALES PROJECT SIGMAT</p>
@@ -41,118 +112,28 @@
 
             <div class="modal-footer">
               <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">CERRAR</a>
-            </div>
+            </div> 
+       </div> 
 
-          </div> 
-
-          <a href="#modal2" class="waves-effect waves-light btn modal-trigger"><i class="material-icons left">assessment</i>Tablas</a>
-           
-            <div id="modal2" class="modal modal-fixed-footer">
-          
+        <div id="modal2" class="modal modal-fixed-footer">
             <div class="modal-content">
               <h4>TITULO DE LA MODAL TABLAS</h4>
-              <p> HOLA MUNDO PRUEBAS CON VENTANAS MODALES PROJECT SIGMAT CON TABLAS </p>
+              <p>HOLA MUNDO PRUEBAS CON VENTANAS MODALES PROJECT SIGMAT</p>
             </div>
 
             <div class="modal-footer">
               <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">CERRAR</a>
-            </div>
+            </div> 
+        </div> 
 
-          </div>
+          <div id="map"></div>
+          <div id="map-zoom-in"></div>
+          <div id="map-zoom-out"></div>
+          
+   </section>
 
-       </div>
- 
- 
+  <script src="js/map.js"></script>
+  <script src="controller/connection.js"></script>
 
-          <div class="bloque2">
-            <div class="caja1">
-              <div class="input-field">
-                <select class="multiple">
-                  <option value="" disabled="" select="">seleccione una opcion</option>
-                </select>
-                <label>Selecciona una catergoria </label>
-              </div>
-            </div>
-          </div>
-          <div class="bloque3">
-            <p>Rutas</p>
-            <p>Hide/<b>View</b></p>
-          </div>
-
-
-        <div class="bloque4">
-
-            <div class="caja3">
-              <div class="logo">R1</div>
-              <div class="texto">hola</div>
-              <div class="switch right-align">
-                <label>
-                  <input type="checkbox"/><span class="lever"></span>
-                </label>
-              </div>
-            </div>
-
-            <div class="caja3">
-              <div class="logo">R2</div>
-              <div class="texto">hola</div>
-              <div class="switch right-align">
-                <label>
-                  <input type="checkbox"/><span class="lever"></span>
-                </label>
-              </div>
-            </div>
-
-            <div class="caja3">
-              <div class="logo">R3</div>
-              <div class="texto">hola</div>
-              <div class="switch right-align">
-                <label>
-                  <input type="checkbox"/><span class="lever"></span>
-                </label>
-              </div>
-            </div>
-
-            <div class="caja3">
-              <div class="logo">R4</div>
-              <div class="texto">hola</div>
-              <div class="switch right-align">
-                <label>
-                  <input type="checkbox"/><span class="lever"></span>
-                </label>
-              </div>
-            </div>
-
-          </div>
-
-
-          <div class="bloque5">
-            <select id="lista">
-              <option value="-1" selected="">Seleccione la velocidad de actualizacion</option>
-              <option value="1">Tiempo real (cada 0.1 segundos)</option>
-              <option value="2">Rapido (cada segundo)</option>
-              <option value="3">Lento (cada 5 segundos)</option>
-            </select><br/>
-            
-          </div>
-        </div>
-        <div class="flecha z-depth-4"><a> < </a></div>
-    </div>
-
-      <div id="map"></div>
-      <div id="map-zoom-in"></div>
-      <div id="map-zoom-out"></div>
-  </section>
-
- 
-
-    <script src="js/map.js"></script>
-    <script src="controller/connection.js"></script>
-    <script>
-   $(document).ready(function(){
-     $('.modal-trigger').leanModal(open);
-     $('#modal1').openModal();
-   });
-
- </script>
-  </body>
+ </body>
 </html>

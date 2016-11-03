@@ -7,8 +7,15 @@ var marker_bus0 = 'img/bus-markern.svg',
     flecha0=flecha.children("a"),
     izquierda=$('.izquierda'),
     estado=true;
+
+//Funcion para las ventanas modales tanto en inicio como en botones
+$(document).ready(function(){
+     $('.modal-trigger').leanModal(open);
+     $('#modal1').openModal();
+     $('#modal1').openModal();
+   });
+
 //funcion que devuelve los elementos de un vector si repetir
-    
     Array.prototype.unique=function(a){
       return function(){return this.filter(a)}}(function(a,b,c){return c.indexOf(a,b+1)<0
     });
@@ -387,7 +394,7 @@ var b=0;
 //variable para almacenar valores de posicion conceptual y poder saber si hubo un camio de posicion
 var ant=[];
 function asi() {
-		$.getJSON("http://localhost:8080/docs/api/ULTIMAVERSION/data/ruta1.json", function(datos) {
+		$.getJSON("http://localhost:8080/docs/api/ULTIMAVERSION3/data/ruta1.json", function(datos) {
 				$.coordenadas=datos;
         //if para resetear la b cuando se llegue al final de la prueba
         if(b<datos[0].coordenadas.length)
