@@ -1,4 +1,5 @@
 @import '../partials/variables'
+@import '../partials/materialize'
 //colors, fonts etc...
 
 
@@ -9,44 +10,155 @@ body,html
   padding: 0
   width: 100%
   height: 100vh
-  font-family: $letra1
   overflow: hidden
   box-sizing: border-box
 
-.tabs
-  &_contens
-    width: 100%
-    margin: auto
-    position: relative
-    .items
-      position: absolute
-      left: 0
-      top: 0
-      display: none
-      width: 100%
-      &.active
-        display: block
-  &_links
-    display: flex
-    width: 100%
-    margin: auto
-    text-align: center
-    a
-      flex: auto
-      display: block
-      float: left
-      line-height: 3em
-      background: $blanco
-      color: $grisc
-      text-decoration: none
-      font-size: 1em
-      position: relative
-      &.active
-        z-index: 100
-        pointer-events: none
-        color: $naranja
-        border-bottom: 2px solid $naranja
+.izquierda
+  position: absolute
+  z-index: 5
+  font-size: 20px
+  width: 330px
+  margin: 10px
+  background: $verde
+  left: 0px
+  transition: left 1s
+  box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.2)
 
+
+
+
+  .flecha
+    position: absolute
+    display: flex
+    justify-content: center
+    align-items: center
+    top: 150px
+    right: 0px
+    width: 32px
+    height: 60px
+    background: lighten($grisc, 80)
+    cursor: pointer
+    transition: background 1s
+
+    a
+      transition: transform 1s
+      color: $verde
+      font-size: 30px
+    &:hover
+      background: lighten($grisc, 10)
+
+
+  .bloqueO
+    width: 304px
+    padding: 12px
+    background: white
+    height: calc(100vh - 20px)
+    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.2)
+
+  .bloque0
+    width: 280px
+    height: 100px
+    background: white
+    margin-bottom: 12px
+    border-bottom: 1px solid $grisc
+
+    .caja1
+      width: 280px
+      height: 50px
+      background: url("../img/logo.png")
+      background-size: contain
+      background-repeat: no-repeat
+    .caja2
+      width: 280px
+      p
+        text-align: center
+        font-size: 12px
+        font-style: italic
+        font-stretch: condensed
+  .bloque1
+    display: flex
+    flex-direction: column
+    width: 280px
+    background: white
+    border-bottom: 1px solid $grisc
+
+    a
+      margin: 0px 20px
+    a:last-child
+      margin-top: 12px
+      margin-bottom: 12px
+
+  .bloque2
+    width: 280px
+    height: 72px
+    background: $blanco
+    padding-top: 12px
+
+    .caja1
+      display: flex
+      justify-content: center
+
+
+
+  .bloque3
+    width: 280px
+    display: flex
+    background: white
+    border-bottom: 2px
+    padding-left: 10px
+    align-items: baseline
+    p
+      margin: 12px 0px
+
+      font-weight: bold
+      width: 180px
+    p:last-child
+      font-size: 15px
+      width: 80px
+
+      font-weight: lighter
+    b
+      font-size: 20px
+
+
+  .bloque4
+    width: 280px
+    height: 220px
+    overflow-y: auto
+    overflow-x: hidden
+    background: white
+    border-bottom: 2px
+    box-sizing: border-box
+    border: 10px solid white
+    border-radius: 4%
+    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.2)
+    .caja3
+      display: flex
+      width: 260px
+      height: 50px
+      padding: 10px 0px 10px 10px
+      align-items: center
+      border-bottom: 1px solid $grisc
+      .logo
+        display: flex
+        background: $verde
+        border-radius: 20%
+        width: 35px
+        height: 35px
+        align-items: center
+        justify-content: center
+        box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.2)
+
+      .texto
+        width: 130px
+        margin-left: 10px
+
+.bloque5
+  position: absolute
+  width: 256px
+  display: flex
+  flex-direction: column
+  margin: 12px
 
 #container
   height: 20em

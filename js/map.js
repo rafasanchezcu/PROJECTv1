@@ -2,7 +2,55 @@
 var marker_bus0 = 'img/bus-markern.svg',
   	marker_bus1 = 'img/bus-markerv.svg',
   	marker_bus2 = 'img/bus-markerm.svg',
-  	marker_estacion = 'img/bus-stop.svg';
+  	marker_estacion = 'img/bus-stop.svg',
+    flecha=$('.flecha'),
+    flecha0=flecha.children("a"),
+    izquierda=$('.izquierda'),
+    estado=true;
+//funcion que devuelve los elementos de un vector si repetir
+    
+    Array.prototype.unique=function(a){
+      return function(){return this.filter(a)}}(function(a,b,c){return c.indexOf(a,b+1)<0
+    });
+
+
+    flecha.click( function () {
+      console.log("hola");
+
+      if (estado) {
+        estado=false;
+        izquierda.css('left','-314px');
+        flecha0.css('transform','rotateZ(180deg)');
+      }else {
+        estado=true;
+        izquierda.css('left','0px');
+        flecha0.css('transform','rotateZ(0deg)');
+      }
+
+    });
+
+function agregarRutas(rutas,data) {
+  var opcionesRutas=["Todas las rutas"],
+      opcionesSelect=[];
+
+  console.log("hola "+rutas[1].categoria);
+    for (var i = 0; i < rutas.length; i++) {
+
+      opcionesRutas=opcionesRutas.concat(rutas[i].categoria);
+    }
+    opcionesRutas=opcionesRutas.unique();
+
+    for (var i = 0; i < opcionesRutas.length; i++) {
+
+      opcionesSelect.push("<option value="+i+">"+opcionesRutas[i]+"</option>")
+    }
+    console.log(opcionesSelect);
+    $('select').append(opcionesSelect.join(" "));
+    $('select').material_select();
+
+
+
+}
 
 /*
 //codigo encargado de crear la grafica
@@ -336,10 +384,10 @@ var R2=factory.crearPaqueteMarker("R2",map,5);
 
 timer=setInterval(asi,1000);
 var b=0;
-//variable para almacenar valores de posicion conceptual y poder saber si ubo un camio de posicion
+//variable para almacenar valores de posicion conceptual y poder saber si hubo un camio de posicion
 var ant=[];
 function asi() {
-		$.getJSON("http://localhost:8000/data/ruta1.json", function(datos) {
+		$.getJSON("http://localhost:8080/docs/api/ULTIMAVERSION/data/ruta1.json", function(datos) {
 				$.coordenadas=datos;
         //if para resetear la b cuando se llegue al final de la prueba
         if(b<datos[0].coordenadas.length)

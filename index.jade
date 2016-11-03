@@ -5,27 +5,94 @@ html(lang="es")
     meta(charset="UTF-8")
     script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGeiXByYhldiT7SRt5xKIcz3s3k_a6jjM&" )
     script(src="lib/jquery-2.2.4.min.js")
-    script(src="lib/angular.min.js")  
+    script(src="lib/angular.min.js")
+    script(src="js/min/materialize.min.js") 
+    link(rel="stylesheet", type="text/css", href="../css/scroll.css")
     link(href="css/style.css",rel="stylesheet")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
 
     
   body
     section
+      .izquierda
+        .bloqueO
+          .bloque0
+            .caja1 
+            .caja2 
+              p.thin SISTEMA DE INFORMACION GEOGRAFICA PARA EL MONITORE AUTOMATICO DEL TRANSPORTE
+          .bloque1
+            a.waves-effect.waves-light.btn-large 
+              i.material-icons.left room
+              | Monitoreo
+            a.waves-effect.waves-light.btn-large 
+              i.material-icons.left assessment
+              | Tablas
+          
+          .bloque2
+            .caja1
+              .input-field
+                select.multiple
+                  option(value='', disabled='', select='') seleccione una opcion
+                  
+                label Selecciona una catergoria 
+          
+          
+          .bloque3
+            p Rutas
+            p Hide/
+              b View
+              
+              
+            
+          .bloque4
+            .caja3
+              .logo R1
+              .texto hola
+              .switch.right-align
+                label
+                  input(type="checkbox")
+                  span.lever
+            .caja3
+              .logo R2
+              .texto hola
+              .switch.right-align
+                label
+                  input(type="checkbox")
+                  span.lever
+            .caja3
+              .logo R3
+              .texto hola
+              .switch.right-align
+                label
+                  input(type="checkbox")
+                  span.lever
+            .caja3
+              .logo R4
+              .texto hola
+              .switch.right-align
+                label
+                  input(type="checkbox")
+                  span.lever 
+          .bloque5
+            select#lista
+              option(value="-1" selected="") Seleccione la velocidad de actualizacion
+              option(value="1") Tiempo real (cada 0.1 segundos)
+              option(value="2") Rapido (cada segundo)
+              option(value="3") Lento (cada 5 segundos)
+            br
+            button(onClick="window.location.href='view/r1.html'")#btn0 ruta 1
+            br
+            button(onClick="window.location.href='view/multiplesRutas.html'")#btn1 multiples rutas simulneamente
+            
+        .flecha.z-depth-4
+          a < 
+              
+          
       #map
       #map-zoom-in
       #map-zoom-out
-      #izquierda
-        .abajo
-          select#lista
-            option(value="-1" selected="") Seleccione la velocidad de actualizacion
-            option(value="1") Tiempo real (cada 0.1 segundos)
-            option(value="2") Rapido (cada segundo)
-            option(value="3") Lento (cada 5 segundos)
-          br
-          button(onClick="window.location.href='view/r1.html'")#btn0 ruta 1
-          br
-          button(onClick="window.location.href='view/multiplesRutas.html'")#btn1 multiples rutas simulneamente
-              
+      
+            
     script(src="js/map.js")
     script(src="controller/connection.js")
         

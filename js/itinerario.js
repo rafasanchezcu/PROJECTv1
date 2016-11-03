@@ -29,7 +29,7 @@ function Itinerario(nBuses,disEE,paradas) {
           }
 
       //agregando todos los buses de los que se dispone y ocultandolos para usarlos cuando sea necesario
-      lineG.append('<li class=bus></li>')
+      lineG.append('<li class=bus>id tyo</li>')
       setTimelineWidth(disEE,timeline0,nEstaciones);
       var estBus=$('#recorrido').html()
       agregarRecorridosFaltantes(nBuses);
@@ -131,7 +131,7 @@ $("#btn6").click(function(){
   //Se encarga de eliminar un recorrido, una vez que el bus ha completado su trayecto y ya no se encuentra en el itinerario
   //se usa un indice para este evento ya que es posible que un bus adelante a otro por lo que no siempre el primero en entrar es el primero en salir
   this.eliminarRecorrido=function (indice) {
-    var time =caja.children(".timeline0");;
+    var time =caja.children(".timeline0");
     if (time.length-1<indice) {
       console.log("el sistemas no cuenta con buses");
     }
