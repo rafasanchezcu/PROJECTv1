@@ -1,7 +1,6 @@
 
 <!--el ng-app hace posible consultar el scrip connection y traer la funcion Ruta-->
-<!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
     <title>SIGMAT</title>
     <meta charset="UTF-8"/>
@@ -9,131 +8,84 @@
     <script src="lib/jquery-2.2.4.min.js"></script>
     <script src="lib/angular.min.js"></script>
     <script src="js/min/materialize.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="../ULTIMAVERSION3/css/scroll.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/scroll.css"/>
     <link href="css/style.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
   </head>
-
-
- <body>
-  <section>
-    <div class="izquierda">
+  <body>
+    <section>
+      <div class="izquierda">
         <div class="bloqueO">
-
           <div class="bloque0">
             <div class="caja1"></div>
             <div class="caja2">
-              <p class="thin"><b>Sistema de informacion geografico para el monitoreo automatico del transporte</b></p>
+              <p class="thin">SISTEMA DE INFORMACION GEOGRAFICA PARA EL MONITORE AUTOMATICO DEL TRANSPORTE</p>
             </div>
           </div>
-
-          <div class="bloque1">
-               <a class="modal-trigger waves-effect waves-light btn" href="#modal1"><i class="material-icons left">room</i>Monitoreo</a>
-               <a href="#modal2" class="waves-effect waves-light btn modal-trigger"><i class="material-icons left">assessment</i>Tablas</a>
-          </div>
- 
+          <div class="bloque1"><a href="#modal1" class="modal-trigger waves-effect waves-light btn-large btnM"><i class="material-icons left">room</i>Monitoreo</a><a href="#modal2" class="modal-trigger waves-effect waves-light btn-large btnT"><i class="material-icons left">assessment</i>Tablas</a></div>
           <div class="bloque2">
             <div class="caja1">
               <div class="input-field">
-                <select class="multiple">
-                  <option value="" disabled="" select="">Seleccione Carrera</option>
+                <select id="filtrar" class="multiple">
+                  <option value="-1" disabled="" selected="">seleccione una opcion</option>
                 </select>
-                <label>Inicie Monitoreo </label>
+                <label>Selecciona una catergoria </label>
               </div>
             </div>
           </div>
-
           <div class="bloque3">
             <p>Rutas</p>
-            <p>Hide/<b>View</b></p>
+            <p>Ocultar/<b>Ver  </b></p>
           </div>
-
-           <div class="bloque4">
-             <div class="caja3">
-                <div class="logo">R1</div>
-                <div class="texto">hola</div>
-              <div class="switch right-align">
-                <label>
-                  <input type="checkbox"/><span class="lever"></span>
-                </label>
-              </div>
-             </div>
-
-            <div class="caja3">
-                <div class="logo">R2</div>
-                <div class="texto">hola</div>
-              <div class="switch right-align">
-                <label>
-                  <input type="checkbox"/><span class="lever"></span>
-                </label>
-              </div>
-            </div>
-
-            <div class="caja3">
-                <div class="logo">R3</div>
-                <div class="texto">hola</div>
-              <div class="switch right-align">
-                <label>
-                  <input type="checkbox"/><span class="lever"></span>
-                </label>
-              </div>
-            </div>
-
-            <div class="caja3">
-                <div class="logo">R4</div>
-                <div class="texto">hola</div>
-              <div class="switch right-align">
-                <label>
-                  <input type="checkbox"/><span class="lever"></span>
-                </label>
-              </div>
-            </div>
-          </div>
-
+          <div class="bloque4"></div>
           <div class="bloque5">
             <select id="lista">
-              <option value="-1" selected="">S. Velocidad De Actualizacion</option>
+              <option value="-1" selected="">Seleccione la velocidad de actualizacion</option>
               <option value="1">Tiempo real (cada 0.1 segundos)</option>
               <option value="2">Rapido (cada segundo)</option>
               <option value="3">Lento (cada 5 segundos)</option>
-            </select><br/>
+            </select>
+            <button onClick="window.location.href='view/r1.html'" id="btn0">ruta 1</button><br/>
+            <button onClick="window.location.href='view/multiplesRutas.html'" id="btn1">multiples rutas simulneamente</button>
           </div>
-
-    </div>
-        <div class="flecha z-depth-4"><a> < </a></div>
-    </div>
-
-    <!-- DIV PARA LAS VENTANAS MODALES -->
-       <div id="modal1" class="modal modal-fixed-footer">
-            <div class="modal-content">
-              <h4>TITULO DE LA MODAL LINEA DE TIEMPO</h4>
-              <p>HOLA MUNDO PRUEBAS CON VENTANAS MODALES PROJECT SIGMAT</p>
+        </div>
+        <div class="flecha"><a>< </a></div>
+      </div>
+      <div id="modal1" class="modal modal-fixed-footer">
+        <div class="modal-content">
+          <h4 class="center-align flow-text">CENTRO DE MONITOREO DE RUTAS: LINEAS DE TIEMPO</h4>
+          <div class="cajam1">
+            <div class="cajam1s"></div>
+            <h3 class="cajam1m flow-text">Seleccione la Ruta o Rutas que desea monitorizar</h3>
+            <div class="cajam1i">
+              <form action="#" class="multipleM">
+                <h3>SELECCIONE UNA CATEGORIA</h3>
+              </form>
             </div>
-
-            <div class="modal-footer">
-              <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">CERRAR</a>
-            </div> 
-       </div> 
-
-        <div id="modal2" class="modal modal-fixed-footer">
-            <div class="modal-content">
-              <h4>TITULO DE LA MODAL TABLAS</h4>
-              <p>HOLA MUNDO PRUEBAS CON VENTANAS MODALES PROJECT SIGMAT</p>
+          </div>
+        </div>
+        <div class="modal-footer"><a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Iniciar monitoreo</a></div>
+      </div>
+      <div id="modal2" class="modal modal-fixed-footer">
+        <div class="modal-content">
+          <h4 class="center-align flow-text">CENTRO DE MONITOREO DE RUTAS: TABLAS    </h4>
+          <div class="cajam2">
+            <div class="cajam2s"></div>
+            <h3 class="cajam2m flow-text">Selecciones la Ruta que desea monitorizar</h3>
+            <div class="cajam2i">
+              <form action="#" class="unica">
+                <h3>SELECCIONE UNA CATEGORIA</h3>
+              </form>
             </div>
-
-            <div class="modal-footer">
-              <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">CERRAR</a>
-            </div> 
-        </div> 
-
-          <div id="map"></div>
-          <div id="map-zoom-in"></div>
-          <div id="map-zoom-out"></div>
-          
-   </section>
-
-  <script src="js/map.js"></script>
-  <script src="controller/connection.js"></script>
-
- </body>
+          </div>
+        </div>
+        <div class="modal-footer"><a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Iniciar monitoreo  </a></div>
+      </div>
+      <div id="map"></div>
+      <div id="map-zoom-in"></div>
+      <div id="map-zoom-out"></div>
+    </section>
+    <script src="js/map.js"></script>
+    <script src="controller/connection.js"></script>
+  </body>
 </html>

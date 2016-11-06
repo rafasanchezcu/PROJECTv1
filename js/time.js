@@ -1,7 +1,7 @@
 
 
   jQuery(document).ready(function($){
-    $.getJSON("http://localhost:8080/docs/api/ULTIMAVERSION3/data/rutas.json").
+    $.getJSON("http://localhost:8000/data/rutas.json").
       success(function(data) {
       $.rutas = data;
 
@@ -9,7 +9,7 @@
         paradas=data[0].paradas, //el indice marca la ruta, en este caso se selecciona la primera ruta del json
         nEstaciones=paradas.length;
         //hacemos este llamado para capturar l número de buses iniciales
-        $.getJSON("http://localhost:8080/docs/api/ULTIMAVERSION3/data/busesR1.json").
+        $.getJSON("http://localhost:8000/data/busesR1.json").
              success(function(dataB) {
              $.bus = dataB;
               var nBuses=dataB.length;
@@ -19,7 +19,7 @@
 
 });
 
-                  $.getJSON("http://localhost:8080/docs/api/ULTIMAVERSION3/data/busesR1.json").
+                  $.getJSON("http://localhost:8000/data/busesR1.json").
                              success(function(dataB) {
                                $.bus = dataB;
 

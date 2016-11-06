@@ -1,5 +1,5 @@
   jQuery(document).ready(function($){
-    $.getJSON("http://localhost:8080/docs/api/ULTIMAVERSION3/data/rutas.json").
+    $.getJSON("http://localhost:8000/data/rutas.json").
       success(function(data) {
       $.rutas = data;
 
@@ -18,7 +18,7 @@
 
 
 
-                  $.getJSON("http://localhost:8080/docs/api/ULTIMAVERSION3/data/busesR1.json").
+                  $.getJSON("http://localhost:8000/data/busesR1.json").
                              success(function(dataB) {
                                $.bus = dataB;
                                it.agregarBuses(3);

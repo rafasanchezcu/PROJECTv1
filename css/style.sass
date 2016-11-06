@@ -12,17 +12,20 @@ body,html
   height: 100vh
   overflow: hidden
   box-sizing: border-box
-
+.btn-large
+  background: $color-1
+  &:hover
+    background: $color-2
 .izquierda
   position: absolute
-  z-index: 5
   font-size: 20px
-  width: 330px
+  width: 346px
   margin: 10px
-  background: $verde
+  background: $color-1
   left: 0px
   transition: left 1s
   box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.2)
+  z-index: 1
 
 
 
@@ -36,24 +39,28 @@ body,html
     right: 0px
     width: 32px
     height: 60px
-    background: lighten($grisc, 80)
+    background: $color-2
     cursor: pointer
-    transition: background 1s
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.4)
+    transition: box-shadow 0.5s
 
     a
       transition: transform 1s
-      color: $verde
+      color: white
       font-size: 30px
     &:hover
-      background: lighten($grisc, 10)
+      box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.4)
 
 
   .bloqueO
-    width: 304px
-    padding: 12px
+    width: 320px
+    padding: 12px 20px
     background: white
     height: calc(100vh - 20px)
     box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.2)
+    overflow-y: auto
+    overflow-x: hidden
+
 
   .bloque0
     width: 280px
@@ -109,13 +116,12 @@ body,html
     align-items: baseline
     p
       margin: 12px 0px
-
+      padding-left: 12px
       font-weight: bold
-      width: 180px
+      width: 160px
     p:last-child
       font-size: 15px
       width: 80px
-
       font-weight: lighter
     b
       font-size: 20px
@@ -129,8 +135,10 @@ body,html
     background: white
     border-bottom: 2px
     box-sizing: border-box
-    border: 10px solid white
-    border-radius: 4%
+    border-top: 10px solid white
+    border-bottom : 10px solid white
+    border-left: 10px solid white
+    border-radius: 5px
     box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.2)
     .caja3
       display: flex
@@ -141,7 +149,7 @@ body,html
       border-bottom: 1px solid $grisc
       .logo
         display: flex
-        background: $verde
+        background: $color-1
         border-radius: 20%
         width: 35px
         height: 35px
@@ -152,6 +160,8 @@ body,html
       .texto
         width: 130px
         margin-left: 10px
+        font-stretch: condensed
+        font-size: 17px
 
 .bloque5
   position: absolute
@@ -163,25 +173,97 @@ body,html
 #container
   height: 20em
 section
-  display: flex
   #map
     width: 100%
     height: 100vh
+.modal-content
+  display: flex
+  flex-direction: column
+  .cajam1,.cajam2
+    display: flex
+    flex-direction: column
+    width: 100%
+    height: 100%
+  .cajam1s,.cajam1i,.cajam2s,.cajam2i
+    width: 80%
+    margin: auto
+    height: 100%
+
+  .cajam1m,.cajam2m
+    display: flex
+    justify-content: center
+    width: 100%
+    align-items: center
+    margin: 12px 0
 
 
+  .cajam1s,.cajam2s
+    display: flex
+    width: 80%
+    height: 50%
+    margin: auto
+    margin-bottom: 6px
+
+    .cajar
+      color: white
+      width: 100%
+      height: 100%
+      display: flex
+      font-size: 17px
+      font-stretch: condensed
+      text-align: center
+      align-items: center
+      justify-content: center
+      margin-right: 12px
+      cursor: pointer
+      font-weight: bold
+      background: $color-1
+      border-radius: 5px
+      transition: box-shadow 0.5s
+      transition: background .5s
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.4)
+      &:hover
+        box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.4)
+        background: $color-2
+      &:last-child
+        margin-right: 0px
+    .active
+      box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.4)
+      background: $color-2
+  .cajam1i,.cajam2i
+    flex: 0 1 auto
+    overflow-y: auto
+    padding: 12px 12px 0 12px
+    margin-top: 6px
+    border-radius: 5px
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.4)
+    form
+      display: flex
+      flex-wrap: wrap
+      h3
+        flex: auto
+        text-align: center
+        margin: auto
+
+      p
+        margin: 0
+        width: 25%
+        flex: 0 1 auto
+        label
+          margin-bottom: 5px
 
 #map-zoom-in, #map-zoom-out
   height: 32px
   width: 32px
   cursor: pointer
   margin-right: 10px
-  border-radius: 50%
-  background-color: rgba($color-1, .9)
+  border-radius: 5%
+  background-color: $color-1
   background-repeat: no-repeat
   background-size: 32px 64px
   background-image: url('../img/cd-icon-controller.svg')
   &:hover
-    background-color: $verde
+    background-color: $color-2
 
 #map-zoom-in
   background-position: 50% 0

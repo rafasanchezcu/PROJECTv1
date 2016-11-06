@@ -21,78 +21,72 @@ html(lang="es")
             .caja2 
               p.thin SISTEMA DE INFORMACION GEOGRAFICA PARA EL MONITORE AUTOMATICO DEL TRANSPORTE
           .bloque1
-            a.waves-effect.waves-light.btn-large 
+            a(href="#modal1").modal-trigger.waves-effect.waves-light.btn-large.btnM
               i.material-icons.left room
               | Monitoreo
-            a.waves-effect.waves-light.btn-large 
+          
+            a(href="#modal2").modal-trigger.waves-effect.waves-light.btn-large.btnT
               i.material-icons.left assessment
               | Tablas
-          
+            
+                    
           .bloque2
             .caja1
               .input-field
-                select.multiple
-                  option(value='', disabled='', select='') seleccione una opcion
+                select.multiple#filtrar
+                  option(value='-1' disabled='' selected='') seleccione una opcion
                   
                 label Selecciona una catergoria 
           
           
           .bloque3
             p Rutas
-            p Hide/
-              b View
-              
-              
-            
-          .bloque4
-            .caja3
-              .logo R1
-              .texto hola
-              .switch.right-align
-                label
-                  input(type="checkbox")
-                  span.lever
-            .caja3
-              .logo R2
-              .texto hola
-              .switch.right-align
-                label
-                  input(type="checkbox")
-                  span.lever
-            .caja3
-              .logo R3
-              .texto hola
-              .switch.right-align
-                label
-                  input(type="checkbox")
-                  span.lever
-            .caja3
-              .logo R4
-              .texto hola
-              .switch.right-align
-                label
-                  input(type="checkbox")
-                  span.lever 
+            p Ocultar/
+              b Ver  
+          .bloque4 
           .bloque5
             select#lista
               option(value="-1" selected="") Seleccione la velocidad de actualizacion
               option(value="1") Tiempo real (cada 0.1 segundos)
               option(value="2") Rapido (cada segundo)
               option(value="3") Lento (cada 5 segundos)
-            br
+
             button(onClick="window.location.href='view/r1.html'")#btn0 ruta 1
             br
             button(onClick="window.location.href='view/multiplesRutas.html'")#btn1 multiples rutas simulneamente
             
-        .flecha.z-depth-4
+            
+        .flecha
           a < 
               
-          
+      #modal1.modal.modal-fixed-footer
+        .modal-content
+          h4.center-align.flow-text CENTRO DE MONITOREO DE RUTAS: LINEAS DE TIEMPO
+          .cajam1
+            .cajam1s
+            h3.cajam1m.flow-text Seleccione la Ruta o Rutas que desea monitorizar
+            .cajam1i
+              form.multipleM(action="#")
+                h3 SELECCIONE UNA CATEGORIA
+              
+        .modal-footer
+          a(href="#!").modal-action.modal-close.waves-effect.waves-green.btn-flat Iniciar monitoreo
+      #modal2.modal.modal-fixed-footer
+        .modal-content
+          h4.center-align.flow-text CENTRO DE MONITOREO DE RUTAS: TABLAS    
+          .cajam2
+            .cajam2s
+            h3.cajam2m.flow-text Selecciones la Ruta que desea monitorizar
+            .cajam2i
+              form.unica(action="#")
+                h3 SELECCIONE UNA CATEGORIA
+        .modal-footer
+          a(href="#!").modal-action.modal-close.waves-effect.waves-green.btn-flat Iniciar monitoreo  
       #map
       #map-zoom-in
       #map-zoom-out
-      
-            
+  
+         
     script(src="js/map.js")
     script(src="controller/connection.js")
         

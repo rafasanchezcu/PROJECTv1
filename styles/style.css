@@ -99,7 +99,7 @@ section #izquierda .arriba table td, section #izquierda .arriba table th {
   cursor: pointer;
   margin-right: 10px;
   border-radius: 50%;
-  background-color: rgba(45, 49, 63, 0.9);
+  background-color: rgba(63, 81, 181, 0.9);
   background-repeat: no-repeat;
   background-size: 32px 64px;
   background-image: url("../img/cd-icon-controller.svg");
