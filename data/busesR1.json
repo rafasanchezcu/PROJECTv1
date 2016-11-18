@@ -1,4 +1,4 @@
-[{"nombre":"P1","horaSalida":"10:10","idRecorrido":"1","distancia":[
+[{"nombre":"R1","horaSalida":"10:10","idRecorrido":"1","distancia":[
   5
 , 9
 , 15
@@ -109,7 +109,7 @@
 , 752
 , 756
 , 769
-]},{"nombre":"P1","horaSalida":"10:20","idRecorrido":"2","distancia":[
+]},{"nombre":"R1","horaSalida":"10:20","idRecorrido":"2","distancia":[
    290
   , 299
   , 304
@@ -221,7 +221,7 @@
 , 278
 , 281
 , 290
-]},{"nombre":"P1","horaSalida":"10:30","idRecorrido":"3","distancia":[
+]},{"nombre":"R1","horaSalida":"10:30","idRecorrido":"3","distancia":[
   8
   , 9
   , 25

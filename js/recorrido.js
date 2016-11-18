@@ -41,6 +41,7 @@ var timeline= $('.timeline'),
     timelineWidth=setTimelineWidth(disEE,timeline,nEstaciones);
 
    timeline.addClass('loaded');
+
 //parte de este codigo es extraido de la pagina https://codyhouse.co/gem/horizontal-timeline/
  //detect click on the next arrow
 timeline.find('.mover').on('click', '.next', function(event){
@@ -126,7 +127,7 @@ $("#btn6").click(function(){
     }
   //se encarga de agregar un recorrido al final, info se refiere a la hora de salida del bus
   this.agregarRecorrido=function(info){
-    caja.append("<div class=timeline0><div class=line>"+estBus+"</div> <div class=datos>hora de salida:</br>"+info+"</div></div>");
+    caja.append("<div class=timeline0><div class=line>"+estBus+"</div> <div class=datos>hora de salida:</br>"+info+"</div><div class=cerrar>x</div></div>");
   }
   //Se encarga de eliminar un recorrido, una vez que el bus ha completado su trayecto y ya no se encuentra en el itinerario
   //se usa un indice para este evento ya que es posible que un bus adelante a otro por lo que no siempre el primero en entrar es el primero en salir
@@ -160,9 +161,9 @@ $("#btn6").click(function(){
   function setPosTimelineE(i,disEE,elemento) {
       /*  var distance = daydiff(timelineComponents['timelineDates'][0], timelineComponents['timelineDates'][i]),
           distanceNorm = Math.round(distance/timelineComponents['eventsMinLapse']) + 2;*/
-          console.log(i);
+          //console.log(i);
           disNormal=Math.round(i*disEE+disEE);
-          console.log(disNormal);
+          //console.log(disNormal);
           elemento.css('left', disNormal+'px');
           elemento.css('transform','translateX(-50%)');
   }

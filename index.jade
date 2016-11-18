@@ -20,68 +20,77 @@ html(lang="es")
             .caja1 
             .caja2 
               p.thin SISTEMA DE INFORMACION GEOGRAFICA PARA EL MONITORE AUTOMATICO DEL TRANSPORTE
-          .bloque1
-            a(href="#modal1").modal-trigger.waves-effect.waves-light.btn-large.btnM
-              i.material-icons.left room
-              | Monitoreo
           
-            a(href="#modal2").modal-trigger.waves-effect.waves-light.btn-large.btnT
+          .bloque1
+            p Panel de MONITOREO
+             i.material-icons.left videocam
+            a(href="#modal1").modal-trigger.waves-effect.waves-light.btn.btnM
+              i.material-icons.left query_builder
+              | L. TIEMPO
+          
+            a(href="#modal2").modal-trigger.waves-effect.waves-light.btn.btnT
               i.material-icons.left assessment
               | Tablas
-            
-                    
-          .bloque2
-            .caja1
-              .input-field
-                select.multiple#filtrar
-                  option(value='-1' disabled='' selected='') seleccione una opcion
-                  
-                label Selecciona una catergoria 
+          
+          
           
           
           .bloque3
-            p Rutas
+            p Mapa
+              i.material-icons.left room
             p Ocultar/
               b Ver  
+              
+          .bloque2
+            .caja1
+              .input-field
+                select.multiple#filtrar            
+                label Selecciona una catergoria     
+          
           .bloque4 
+          
           .bloque5
             select#lista
               option(value="-1" selected="") Seleccione la velocidad de actualizacion
               option(value="1") Tiempo real (cada 0.1 segundos)
               option(value="2") Rapido (cada segundo)
               option(value="3") Lento (cada 5 segundos)
-
-            button(onClick="window.location.href='view/r1.html'")#btn0 ruta 1
-            br
-            button(onClick="window.location.href='view/multiplesRutas.html'")#btn1 multiples rutas simulneamente
-            
+          
             
         .flecha
           a < 
               
       #modal1.modal.modal-fixed-footer
         .modal-content
-          h4.center-align.flow-text CENTRO DE MONITOREO DE RUTAS: LINEAS DE TIEMPO
+          .cerrar.modal-close x
+          h4.center-align.flow-text LINEAS DE TIEMPO
           .cajam1
+            h3.cajam1m.flow-text SELECCIONE una de las siguientes Categorias
             .cajam1s
-            h3.cajam1m.flow-text Seleccione la Ruta o Rutas que desea monitorizar
+            h3.cajam1m.flow-text Seleccione la RUTA o RUTAS que desea MONITOREAR
             .cajam1i
-              form.multipleM(action="#")
+              form.multipleM
                 h3 SELECCIONE UNA CATEGORIA
               
-        .modal-footer
-          a(href="#!").modal-action.modal-close.waves-effect.waves-green.btn-flat Iniciar monitoreo
+        .modal-footer 
+          a(target="_blank").amodal1.modal-action.modal-close.waves-effect.waves-green.btn Iniciar monitoreo
+          a.modal-action.modal-close.waves-effect.waves-red.btn-flat.left Volver al MAPA 
+          
       #modal2.modal.modal-fixed-footer
         .modal-content
-          h4.center-align.flow-text CENTRO DE MONITOREO DE RUTAS: TABLAS    
+          .cerrar.modal-close x
+          h4.center-align.flow-text TABLAS    
           .cajam2
+            h3.cajam2m.flow-text SELECCIONE una de las siguientes Categorias
             .cajam2s
-            h3.cajam2m.flow-text Selecciones la Ruta que desea monitorizar
+            h3.cajam2m.flow-text Selecciones la RUTA que desea MONITOREAR
             .cajam2i
-              form.unica(action="#")
+              form.unica
                 h3 SELECCIONE UNA CATEGORIA
-        .modal-footer
-          a(href="#!").modal-action.modal-close.waves-effect.waves-green.btn-flat Iniciar monitoreo  
+        .modal-footer 
+          a(target="_blank").amodal2.modal-action.modal-close.waves-effect.waves-green.btn Iniciar monitoreo
+          a.modal-action.modal-close.waves-effect.waves-red.btn-flat.left Volver al MAPA  
+           
       #map
       #map-zoom-in
       #map-zoom-out

@@ -1,5 +1,7 @@
 
 <!--el ng-app hace posible consultar el scrip connection y traer la funcion Ruta-->
+<!DOCTYPE html>
+
 <html lang="es">
   <head>
     <title>SIGMAT</title>
@@ -19,23 +21,24 @@
           <div class="bloque0">
             <div class="caja1"></div>
             <div class="caja2">
-              <p class="thin">SISTEMA DE INFORMACION GEOGRAFICA PARA EL MONITORE AUTOMATICO DEL TRANSPORTE</p>
+              <p class="thin"><b>Sistema de informacion geografico para el monitoreo automatico del transporte</b></p>
             </div>
           </div>
-          <div class="bloque1"><a href="#modal1" class="modal-trigger waves-effect waves-light btn-large btnM"><i class="material-icons left">room</i>Monitoreo</a><a href="#modal2" class="modal-trigger waves-effect waves-light btn-large btnT"><i class="material-icons left">assessment</i>Tablas</a></div>
+          <div class="bloque1">
+            <p>Panel de monitoreo<i class="material-icons left">videocam</i></p>
+            <a href="#modal1" class="modal-trigger waves-effect waves-light btn btnM"><i class="material-icons left">query_builder</i>L.TIEMPO</a><a href="#modal2" class="modal-trigger waves-effect waves-light btn btnT"><i class="material-icons left">assessment</i>Tablas</a>
+          </div>
+          <div class="bloque3">
+            <p>Mapa<i class="material-icons left">room</i></p>
+            <p>Ocultar/<b>Ver  </b></p>
+          </div>
           <div class="bloque2">
             <div class="caja1">
               <div class="input-field">
-                <select id="filtrar" class="multiple">
-                  <option value="-1" disabled="" selected="">seleccione una opcion</option>
-                </select>
-                <label>Selecciona una catergoria </label>
+                <select id="filtrar" class="multiple">           </select>
+                <label>SELECCIONE CATEGORIA </label>
               </div>
             </div>
-          </div>
-          <div class="bloque3">
-            <p>Rutas</p>
-            <p>Ocultar/<b>Ver  </b></p>
           </div>
           <div class="bloque4"></div>
           <div class="bloque5">
@@ -45,41 +48,43 @@
               <option value="2">Rapido (cada segundo)</option>
               <option value="3">Lento (cada 5 segundos)</option>
             </select>
-            <button onClick="window.location.href='view/r1.html'" id="btn0">ruta 1</button><br/>
-            <button onClick="window.location.href='view/multiplesRutas.html'" id="btn1">multiples rutas simulneamente</button>
           </div>
         </div>
         <div class="flecha"><a>< </a></div>
       </div>
       <div id="modal1" class="modal modal-fixed-footer">
         <div class="modal-content">
-          <h4 class="center-align flow-text">CENTRO DE MONITOREO DE RUTAS: LINEAS DE TIEMPO</h4>
+          <div class="cerrar modal-close">x</div>
+          <h4 class="align flow-text cajaletrero"><b>LINEA DE TIEMPO</b></h4>
           <div class="cajam1">
-            <div class="cajam1s"></div>
-            <h3 class="cajam1m flow-text">Seleccione la Ruta o Rutas que desea monitorizar</h3>
+            <h3 class="cajam1m flow-text">1-&nbsp; <b>Seleccioné</b>,&nbsp; <u>una</u>&nbsp; <b>categoria</b></h2> <br/>
+            <div class="cajam1s"></div><br/>
+            <h3 class="cajam1m flow-text">2-&nbsp; <b>Seleccioné</b>,&nbsp; <u>una o varias</u>&nbsp; <b>rutas</b></h2>
             <div class="cajam1i">
-              <form action="#" class="multipleM">
-                <h3>SELECCIONE UNA CATEGORIA</h3>
+              <form class="multipleM">
+                <!-- <h3>SELECCIONE UNA CATEGORIA</h3> -->
               </form>
             </div>
           </div>
         </div>
-        <div class="modal-footer"><a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Iniciar monitoreo</a></div>
+        <div class="modal-footer"><a target="_blank" class="amodal1 modal-action modal-close waves-effect waves-green btn"><b>Iniciar monitoreo</b></a><a class="modal-action modal-close waves-effect waves-red btn-flat left">Volver al mapa </a></div>
       </div>
       <div id="modal2" class="modal modal-fixed-footer">
         <div class="modal-content">
-          <h4 class="center-align flow-text">CENTRO DE MONITOREO DE RUTAS: TABLAS    </h4>
+          <div class="cerrar modal-close">x</div>
+          <h4 class="align flow-text cajaletrero"><b>TABLAS    </b></h4>
           <div class="cajam2">
-            <div class="cajam2s"></div>
-            <h3 class="cajam2m flow-text">Selecciones la Ruta que desea monitorizar</h3>
+            <h3 class="cajam2m flow-text">1-&nbsp; <b>Seleccioné</b>,&nbsp; <u>una</u> &nbsp; <b>categoria</b></h2><br/>
+            <div class="cajam2s"></div><br/>
+            <h3 class="cajam2m flow-text">2-&nbsp; <b>Seleccioné</b>,&nbsp; <u>una unica</u>&nbsp; <b>ruta</b></h3>
             <div class="cajam2i">
-              <form action="#" class="unica">
-                <h3>SELECCIONE UNA CATEGORIA</h3>
+              <form class="unica">
+                <!-- <h3>SELECCIONE UNA CATEGORIA</h3> -->
               </form>
             </div>
           </div>
         </div>
-        <div class="modal-footer"><a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Iniciar monitoreo  </a></div>
+        <div class="modal-footer"><a target="_blank" class="amodal2 modal-action modal-close waves-effect waves-green btn"><b>Iniciar monitoreo</b></a><a class="modal-action modal-close waves-effect waves-red btn-flat left">Volver al mapa  </a></div>
       </div>
       <div id="map"></div>
       <div id="map-zoom-in"></div>

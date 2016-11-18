@@ -1,36 +1,36 @@
 [ {"nombre":"R1","color":"00bfa5","categoria":["Autopista","Carrera 27"],"descripcion":"Ruta de la excelencia","longitud":5,"paradas":[
   {"nombre":"Estacion 1","distancia":0,"coordenadas":{"latitud":7.1372035,"longitud":-73.1223754}},
-	{"nombre":"Estacion 2","distancia":3100,"coordenadas":{"latitud":7.107844,"longitud":-73.116074}},
+  {"nombre":"Estacion 2","distancia":3100,"coordenadas":{"latitud":7.107844,"longitud":-73.116074}},
   {"nombre":"Estacion 3","distancia":6100,"coordenadas":{"latitud":7.095459,"longitud":-73.110635}},
-	{"nombre":"Estacion 4","distancia":6800,"coordenadas":{"latitud":7.0846673,"longitud":-73.1079612}},
-	{"nombre":"Estacion 5","distancia":7400,"coordenadas":{"latitud":7.070489,"longitud":-73.104748}},
+  {"nombre":"Estacion 4","distancia":6800,"coordenadas":{"latitud":7.0846673,"longitud":-73.1079612}},
+  {"nombre":"Estacion 5","distancia":7400,"coordenadas":{"latitud":7.070489,"longitud":-73.104748}},
   {"nombre":"Estacion 6","distancia":7800,"coordenadas":{"latitud":7.069408,"longitud":-73.103893}},
-	{"nombre":"Estacion 7","distancia":8700,"coordenadas":{"latitud":7.0667097,"longitud":-73.0997972}}
+  {"nombre":"Estacion 7","distancia":8700,"coordenadas":{"latitud":7.0667097,"longitud":-73.0997972}}
 ]
 },
-  {"nombre":"R2","color":"00b8d4","categoria":["Autopista","Carrera 33"],"descripcion":"De piedecuesta a el centro","longitud":7,"paradas":[
+  {"nombre":"R2","color":"00b8d4","categoria":["Autopista","Carrera 33"],"descripcion":"Piedecuesta-Uis","longitud":7,"paradas":[
     {"nombre":"Estacion 1","distancia":0,"coordenadas":{"latitud":7.1372035,"longitud":-73.1223754}},
-  	{"nombre":"Estacion 2","distancia":3100,"coordenadas":{"latitud":7.107844,"longitud":-73.116074}},
+    {"nombre":"Estacion 2","distancia":3100,"coordenadas":{"latitud":7.107844,"longitud":-73.116074}},
     {"nombre":"Estacion 3","distancia":6100,"coordenadas":{"latitud":7.095459,"longitud":-73.110635}},
-  	{"nombre":"Estacion 4","distancia":6800,"coordenadas":{"latitud":7.0846673,"longitud":-73.1079612}},
-  	{"nombre":"Estacion 5","distancia":7400,"coordenadas":{"latitud":7.070489,"longitud":-73.104748}},
+    {"nombre":"Estacion 4","distancia":6800,"coordenadas":{"latitud":7.0846673,"longitud":-73.1079612}},
+    {"nombre":"Estacion 5","distancia":7400,"coordenadas":{"latitud":7.070489,"longitud":-73.104748}},
     {"nombre":"Estacion 6","distancia":7800,"coordenadas":{"latitud":7.069408,"longitud":-73.103893}},
-  	{"nombre":"Estacion 7","distancia":8700,"coordenadas":{"latitud":7.0667097,"longitud":-73.0997972}},
+    {"nombre":"Estacion 7","distancia":8700,"coordenadas":{"latitud":7.0667097,"longitud":-73.0997972}},
     {"nombre":"Estacion 7","distancia":9200,"coordenadas":{"latitud":7.0667097,"longitud":-73.0997972}},
     {"nombre":"Estacion 1","distancia":0,"coordenadas":{"latitud":7.070489,"longitud":-73.104748}},
-  	{"nombre":"Estacion 2","distancia":3100,"coordenadas":{"latitud":7.069408,"longitud":-73.103893}},
+    {"nombre":"Estacion 2","distancia":3100,"coordenadas":{"latitud":7.069408,"longitud":-73.103893}},
     {"nombre":"Estacion 3","distancia":6100,"coordenadas":{"latitud":7.0846673,"longitud":-73.1079612}},
-  	{"nombre":"Estacion 4","distancia":6800,"coordenadas":{"latitud":7.095459,"longitud":-73.110635}},
-  	{"nombre":"Estacion 5","distancia":7400,"coordenadas":{"latitud":7.107844,"longitud":-73.116074}},
+    {"nombre":"Estacion 4","distancia":6800,"coordenadas":{"latitud":7.095459,"longitud":-73.110635}},
+    {"nombre":"Estacion 5","distancia":7400,"coordenadas":{"latitud":7.107844,"longitud":-73.116074}},
     {"nombre":"Estacion 6","distancia":7800,"coordenadas":{"latitud":7.1372035,"longitud":-73.1223754}}
     ]},
-  {"nombre":"R3","color":"0091ea","categoria":["Carrera 33","Carrera 27"],"descripcion":"De cabecera a la UIS","longitud":3,"paradas":[
+  {"nombre":"R3","color":"0091ea","categoria":["Carrera 33","Carrera 27"],"descripcion":"Cabecera-Uis","longitud":3,"paradas":[
     {"nombre":"Estacion 1","distancia":0},
-  	{"nombre":"Estacion 2","distancia":3100},
+    {"nombre":"Estacion 2","distancia":3100},
     {"nombre":"Estacion 3","distancia":6100},
-  	{"nombre":"Estacion 4","distancia":6800},
-  	{"nombre":"Estacion 5","distancia":7400},
+    {"nombre":"Estacion 4","distancia":6800},
+    {"nombre":"Estacion 5","distancia":7400},
     {"nombre":"Estacion 6","distancia":7800},
-  	{"nombre":"Estacion 7","distancia":8700},
+    {"nombre":"Estacion 7","distancia":8700},
     {"nombre":"Estacion 8","distancia":9200}]}
 ]
