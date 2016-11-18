@@ -8294,3 +8294,17 @@ section #map {
  color: white;
  text-align: center;
 }
+
+.grid {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+
+}
+
+.red { color: yellow;  background-color: red !important;}
+.blue { color: blue;  }
+
+.ui-grid .ui-grid-render-container-body .ui-grid-viewport {
+  overflow-x: scroll !important;
+}

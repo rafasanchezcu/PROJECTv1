@@ -137,9 +137,9 @@ cajam2s.on('click','div',function () {
 //genera las opciones para multiples rutas en la ventana modal
 function generarOpcionesU(rutasSeleccionadas) {
   cuadroRutas = [];
-    cuadroRutas.push("<p><input disabled name=group1 value="+rutasSeleccionadas[0].nombre+" type=radio id=u"+rutasSeleccionadas[0].nombre+" class=with-gap /><label for=u"+rutasSeleccionadas[0].nombre+">"+rutasSeleccionadas[0].nombre+"</label></p>");
+    cuadroRutas.push("<p><input name=group1 value="+rutasSeleccionadas[0].nombre+" type=radio id=u"+rutasSeleccionadas[0].nombre+" class=with-gap checked/><label for=u"+rutasSeleccionadas[0].nombre+">"+rutasSeleccionadas[0].nombre+"</label></p>");
   for (var i = 1; i < rutasSeleccionadas.length; i++) {
-    cuadroRutas.push("<p><input disabled name=group1 value="+rutasSeleccionadas[i].nombre+" type=radio id=u"+rutasSeleccionadas[i].nombre+" class=with-gap /><label for=u"+rutasSeleccionadas[i].nombre+">"+rutasSeleccionadas[i].nombre+"</label></p>");
+    cuadroRutas.push("<p><input name=group1 value="+rutasSeleccionadas[i].nombre+" type=radio id=u"+rutasSeleccionadas[i].nombre+" class=with-gap /><label for=u"+rutasSeleccionadas[i].nombre+">"+rutasSeleccionadas[i].nombre+"</label></p>");
   }
   unica.children().remove();
   unica.append(cuadroRutas.join(" "));
@@ -220,7 +220,7 @@ $('.amodal2').click(function () {
   }//en caso de que el usuario desee monitorizar una tabla
   else {
     //defina la ruta de la tabla
-    //window.open('view/tabla.html?value='+seleccionada);
+    window.open('view/indextabla.html?ruta='+seleccionada);
     Materialize.toast('¡La ruta seleccionada es: '+seleccionada+'!', 5000);
   }
 });
