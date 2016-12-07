@@ -1,4 +1,4 @@
-[{"nombre":"R1","horaSalida":"10:10","idRecorrido":"1","distancia":[
+{"hora":"10:12:24","recorridos":[{"id":"EM-KML256","idRecorrido":"1","horaSalidaReal":"10:10","distancia":[
   5
 , 9
 , 15
@@ -109,7 +109,7 @@
 , 752
 , 756
 , 769
-]},{"nombre":"R1","horaSalida":"10:20","idRecorrido":"2","distancia":[
+]},{"id":"EL-KML257","idRecorrido":"2","horaSalidaReal":"10:20","distancia":[
    290
   , 299
   , 304
@@ -221,7 +221,7 @@
 , 278
 , 281
 , 290
-]},{"nombre":"R1","horaSalida":"10:30","idRecorrido":"3","distancia":[
+]},{"id":"EM-KML258","idRecorrido":"3","horaSalidaReal":"10:30","idRecorrido":"3","distancia":[
   8
   , 9
   , 25
@@ -333,4 +333,4 @@
   , 177
   , 186
 ]}
- ]
+ ]}

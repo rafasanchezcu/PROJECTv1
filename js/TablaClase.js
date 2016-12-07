@@ -1,6 +1,9 @@
 var app = angular.module('app', ['ngAnimate', 'ngTouch', 'ui.grid', 'ui.grid.selection', 'ui.grid.exporter']);
 
-app.controller('MainCtrl', ['$scope', '$http', function ($scope, $http) {
+var rutaSeleccionada = window.location.search.split("=")[1];
+    console.log(rutaSeleccionada);
+
+app.controller('MainCtrl', ['$scope', '$http','i18nService', function ($scope, $http, i18nService ) {
 
   
  $scope.deleteRow = function(row) {
@@ -8,36 +11,41 @@ app.controller('MainCtrl', ['$scope', '$http', function ($scope, $http) {
     $scope.gridOptions.data.splice(index, 1);
   };
 
+  
+    
     $scope.gridOptions = {
-    enableHorizontalScrollbar: 0,
+    
     enableSorting: true,
+    minimumColumnSize: 90,
     columnDefs: [
       
-      {name: 'Eliminar', cellTemplate: '<button class="btn primary" ng-click="grid.appScope.deleteRow(row)">Eliminar</button>'},
-      {field: 'Clave'},
-      {field: 'Conductor'},
-      {field: 'Placa'},
-      {field: 'Ruta'},
-      {field: 'HoraSalidaEstimada', name:'H.S.E'},
-      {field: 'HoraSalidaReal', name:'H.S.R'},
-      {field: 'HorarioEstimado.ST1', name:'H.E-est1'},
-      {field: 'HorarioReal.ST1', name:'H.R-est1',
+      {name: 'Eliminar', width: '7%', cellTemplate: '<button class="btn primary" ng-click="grid.appScope.deleteRow(row)">Eliminar</button>'},
+      {field: 'Clave', width: '6%'},
+      {field: 'Conductor', width: '8%'},
+      {field: 'Placa', width: '7%'},
+      {field: 'Ruta', width: '6%'},
+      {field: 'HoraSalidaEstimada', name:'H.S.E', width: '7%'},
+      {field: 'HoraSalidaReal', name:'H.S.R', width: '7%'},
+      {field: 'HorarioEstimado.ST1', name:'H.E-est1', width: '8%'},
+      {field: 'HorarioReal.ST1', name:'H.R-est1', width: '8%',
         cellClass: function(grid, row, col, rowRenderIndex, colRenderIndex) {
-          if (grid.getCellValue(row,col) > '12:15:00') {
+          if (grid.getCellValue(row,col) < 'HorarioEstimado.ST1') {
             return 'red';
           }
         }
       },
-      {field: 'HorarioEstimado.ST2', name:'H.E-est2'},
-      {field: 'HorarioReal.ST2', name:'H.R-est2'},
-      {field: 'HorarioEstimado.ST3', name:'H.E-est3'},
-      {field: 'HorarioReal.ST3', name:'H.R-est3'},
-      {field: 'HorarioEstimado.ST4', name:'H.E-est4'},
-      {field: 'HorarioReal.ST4', name:'H.R-est4'},
-      {field: 'HorarioEstimado.ST5', name:'H.E-est5'},
-      {field: 'HorarioReal.ST5', name:'H.R-est5'}
+      {field: 'HorarioEstimado.ST2', name:'H.E-est2', width: '8%'},
+      {field: 'HorarioReal.ST2', name:'H.R-est2', width: '8%'},
+      {field: 'HorarioEstimado.ST3', name:'H.E-est3', width: '8%'},
+      {field: 'HorarioReal.ST3', name:'H.R-est3', width: '8%'},
+      {field: 'HorarioEstimado.ST4', name:'H.E-est4', width: '8%'},
+      {field: 'HorarioReal.ST4', name:'H.R-est4', width: '8%'},
+      {field: 'HorarioEstimado.ST5', name:'H.E-est5', width: '8%'},
+      {field: 'HorarioReal.ST5', name:'H.R-est5', width: '8%'},
+      {field: 'HorarioReal.ST6', name:'H.R-est6', width: '8%'}
+
     ],
-    
+    rowHeight: 35,
     exporterMenuCsv: false,
     enableGridMenu: true,
     enableSelectAll: true,
@@ -62,8 +70,9 @@ app.controller('MainCtrl', ['$scope', '$http', function ($scope, $http) {
       $scope.gridApi = gridApi;
     }
   };
+  i18nService.setCurrentLang('es');
 
-  $http.get('../data/Tabla.json')
+  $http.get("../data/Tabla"+rutaSeleccionada+".json")
     .success(function(data) {
       $scope.gridOptions.data = data;
     });

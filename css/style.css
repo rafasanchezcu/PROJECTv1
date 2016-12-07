@@ -7978,9 +7978,7 @@ body, html {
   overflow: hidden;
   box-sizing: border-box;
 }
-.btn:hover {
-  background: #1bce7c;
-}
+
 /*.btn
  * background: $color-1
  * &:hover
@@ -8192,7 +8190,7 @@ section #map {
 }
 .modal-content .cajam1m, .modal-content .cajam2m {
   display: flex;
-  justify-content: left;
+  justify-content: center;
   width: 100%;
   align-items: center;
   margin: 12px 0;
@@ -8205,7 +8203,7 @@ section #map {
   margin-bottom: 6px;
 }
 .modal-content .cajam1s .cajar, .modal-content .cajam2s .cajar {
-  color: white;
+  color: #fdfdfd;
   width: 100%;
   height: 100%;
   display: flex;
@@ -8214,12 +8212,12 @@ section #map {
   text-align: center;
   align-items: center;
   justify-content: center;
-  margin-right: 10px;
+  margin-right: 12px;
   cursor: pointer;
   font-weight: bold;
   background: #1bce7c;
-  border-radius: 50px;
-  padding: 10px;
+  border-radius: 5px;
+  padding: 4px;
   transition: box-shadow 0.5s;
   transition: background 0.5s;
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.4);
@@ -8293,18 +8291,4 @@ section #map {
   background-color: #11EF96;
  color: white;
  text-align: center;
-}
-
-.grid {
-  width: 100%;
-  height: 100%;
-  overflow: scroll;
-
-}
-
-.red { color: yellow;  background-color: red !important;}
-.blue { color: blue;  }
-
-.ui-grid .ui-grid-render-container-body .ui-grid-viewport {
-  overflow-x: scroll !important;
 }

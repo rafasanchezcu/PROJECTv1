@@ -96,8 +96,8 @@ function agregarCategoriaModal() {
   opcionesSelectu=[];
 
   for (var i = 0; i < opcionesRutas.length; i++) {
-    opcionesSelectm.push("Ver rutas<div class=cajar> "+opcionesRutas[i]+" </div>");
-    opcionesSelectu.push("Ver rutas<div class=cajar> "+opcionesRutas[i]+"</div>");
+    opcionesSelectm.push("ver rutas<div class=cajar> "+opcionesRutas[i]+"</div>");
+    opcionesSelectu.push("ver rutas<div class=cajar> "+opcionesRutas[i]+"</div>");
   }
   cajam1s.append(opcionesSelectm.join(" "));
   cajamm = cajam1s.find(".cajar");
@@ -220,7 +220,7 @@ $('.amodal2').click(function () {
   }//en caso de que el usuario desee monitorizar una tabla
   else {
     //defina la ruta de la tabla
-    window.open('view/indextabla.html?ruta='+seleccionada);
+    window.open('view/indextabla.html?rutas='+seleccionada);
     Materialize.toast('¡La ruta seleccionada es: '+seleccionada+'!', 5000);
   }
 });

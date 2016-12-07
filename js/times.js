@@ -46,15 +46,15 @@
 
             setInterval(function () {
 
-                         if (b<dataB[0].distancia.length) {
+                         if (b<dataB.recorridos[0].distancia.length) {
 
 
                            //console.log(data[0].Nombre);
                            //recorremos el
-                           for (var i = 0; i < dataB.length; i++) {
-                             setPosTimelineB(vectorBuses.eq(i),dataB[i].distancia[b]);
-                             setPosTimelineB(vectorBuses.eq(3+i),dataB[i].distancia[b]);
-                             setPosTimelineB(vectorBuses.eq(6+i),dataB[i].distancia[b]);
+                           for (var i = 0; i < dataB.recorridos.length; i++) {
+                             setPosTimelineB(vectorBuses.eq(i),dataB.recorridos[i].distancia[b]);
+                             setPosTimelineB(vectorBuses.eq(3+i),dataB.recorridos[i].distancia[b]);
+                             setPosTimelineB(vectorBuses.eq(6+i),dataB.recorridos[i].distancia[b]);
                            }
                        b++;
                      }else {
