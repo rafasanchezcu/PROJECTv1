@@ -17,6 +17,7 @@ app.controller('MainCtrl', ['$scope', '$http','i18nService', function ($scope, $
     
     enableSorting: true,
     minimumColumnSize: 90,
+     showGridFooter:true,
     columnDefs: [
       
       {name: 'Eliminar', width: '7%', cellTemplate: '<button class="btn primary" ng-click="grid.appScope.deleteRow(row)">Eliminar</button>'},
@@ -72,10 +73,13 @@ app.controller('MainCtrl', ['$scope', '$http','i18nService', function ($scope, $
   };
   i18nService.setCurrentLang('es');
 
+  function refrescarTiempo() {
   $http.get("../data/Tabla"+rutaSeleccionada+".json")
     .success(function(data) {
       $scope.gridOptions.data = data;
-    });
+    });  
+  };
+  window.setInterval(refrescarTiempo,5000);
 }]);
 
 
