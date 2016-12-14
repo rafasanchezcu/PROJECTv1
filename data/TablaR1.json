@@ -1,180 +1,67 @@
 [
-    {
-      "Clave": "2548TPQ",
-      "Conductor": "PERSONA 1",
-     
-      "Placa": "RZG98Z",
-      "Ruta": "T3",
-      "HoraSalidaEstimada": "11:55:00",
-      "HoraSalidaReal":"11:57:52",
-      "HorarioEstimado": {
-        "ST1": "11:00:00",
-        "ST2": "12:10:00",
-        "ST3": "12:20:00",
-        "ST4": "12:25:00",
-        "ST5": "12:35:00"
-
-      },
-       "HorarioReal": {
-        "ST1": "12:00:00",
-        "ST2": "12:15:00",
-        "ST3": "12:23:52",
-        "ST4": "12:30:00",
-        "ST5": "12:40:11",
-        "ST6": "13:40:11"
-      }
-    },
-    {
-      "Clave": "4654POL",
-      "Conductor": "PERSONA 2",
-      
-      "Placa": "ZGR58D",
-      "Ruta": "T3",
-      "HoraSalidaEstimada": "12:25:00",
-      "HoraSalidaReal":"12:26:00",
-      "HorarioEstimado": {
-        "ST1": "12:30:00",
-        "ST2": "12:40:00",
-        "ST3": "12:50:00",
-        "ST4": "12:55:00",
-        "ST5": "13:05:00"
-      },
-       "HorarioReal": {
-        "ST1": "11:30:00",
-        "ST2": "12:37:00",
-        "ST3": "12:45:00",
-        "ST4": "12:50:25",
-        "ST5": "13:00:11",
-        "ST6": "13:40:11"
-      }
-    },
-
-    {
-      "Clave": "4654POL",
-      "Conductor": "PERSONA 3",
-      
-      "Placa": "ZGR58D",
-      "Ruta": "T3",
-      "HoraSalidaEstimada": "12:25:00",
-      "HoraSalidaReal":"12:26:00",
-      "HorarioEstimado": {
-        "ST1": "12:30:00",
-        "ST2": "12:40:00",
-        "ST3": "12:50:00",
-        "ST4": "12:55:00",
-        "ST5": "13:05:00"
-
-      },
-       "HorarioReal": {
-        "ST1": "11:22:00",
-        "ST2": "12:37:00",
-        "ST3": "12:45:00",
-        "ST4": "12:50:25",
-        "ST5": "13:00:11",
-        "ST6": "14:00:11"
-      }
-    },
-    {
-      "Clave": "4654POL",
-      "Conductor": "PERSONA 4",
-      
-      "Placa": "ZGR58D",
-      "Ruta": "T3",
-      "HoraSalidaEstimada": "12:25:00",
-      "HoraSalidaReal":"12:26:00",
-      "HorarioEstimado": {
-        "ST1": "12:30:00",
-        "ST2": "12:40:00",
-        "ST3": "12:50:00",
-        "ST4": "12:55:00",
-        "ST5": "13:05:00"
-      },
-       "HorarioReal": {
-        "ST1": "11:22:00",
-        "ST2": "12:37:00",
-        "ST3": "12:45:00",
-        "ST4": "12:50:25",
-        "ST5": "13:00:11"
-      }
-    }
-,
 {
-      "Clave": "4654POL",
-      "Conductor": "PERSONA 5",
-      
-      "Placa": "ZGR58D",
-      "Ruta": "T3",
-      "HoraSalidaEstimada": "12:25:00",
-      "HoraSalidaReal":"12:26:00",
-      "HorarioEstimado": {
-        "ST1": "12:30:00",
-        "ST2": "12:40:00",
-        "ST3": "12:50:00",
-        "ST4": "12:55:00",
-        "ST5": "13:05:00"
-      },
-       "HorarioReal": {
-        "ST1": "11:22:00",
-        "ST2": "12:37:00",
-        "ST3": "12:45:00",
-        "ST4": "12:50:25",
-        "ST5": "13:00:11"
-      }
-    },
-    {
-      "Clave": "4654POL",
-      "Conductor": "PERSONA 6",
-      
-      "Placa": "ZGR58D",
-      "Ruta": "T3",
-      "HoraSalidaEstimada": "12:25:00",
-      "HoraSalidaReal":"12:26:00",
-      "HorarioEstimado": {
-        "ST1": "12:30:00",
-        "ST2": "12:40:00",
-        "ST3": "12:50:00",
-        "ST4": "12:55:00",
-        "ST5": "13:05:00"
-      },
-       "HorarioReal": {
-        "ST1": "11:22:00",
-        "ST2": "12:37:00",
-        "ST3": "12:45:00",
-        "ST4": "12:50:25",
-        "ST5": "13:00:11"
-      }
-    },
-    {
-      "Clave": "4654POL",
-      "Conductor": "PERSONA 7",
-      
-      "Placa": "HOLA",
-      "Ruta": "T3",
-      "HoraSalidaEstimada": "12:25:00",
-      "HoraSalidaReal":"12:26:00",
-      "HorarioEstimado": {
-        "ST1": "12:30:00",
-        "ST2": "12:40:00",
-        "ST3": "12:50:00",
-        "ST4": "12:55:00",
-        "ST5": "13:05:00"
-      },
-       "HorarioReal": {
-        "ST1": "11:22:00",
-        "ST2": "12:37:00",
-        "ST3": "12:45:00",
-        "ST4": "12:50:25",
-        "ST5": "13:00:11"
-      }
-    }
-   
-
-
-
-
-
-
-
-
-
-  ]
+"Clave": "HOLA3",
+"Bus": "ZOE101",
+"Conductor": "1098755547",
+"Recorrido": "T3-1",
+"HoraSalidaEstimada": "13:00:00",
+"HoraSalidaReal": "13:10:00",
+"HorarioEstimado": {
+"ST1": "13:24:24",
+"ST2": "13:50:47",
+"ST3": "14:02:52",
+"ST4": "14:05:25",
+"ST5": "14:10:11"
+},
+"HorarioReal": { 
+"ST1": "13:34:59",
+"ST2": "13:55:47",
+"ST3": "14:05:52",
+"ST4": "14:10:25",
+"ST4": "14:15:25"
+},
+"EstaTerminado": true,
+"ProximaParada": 0
+},
+{
+"Clave": "HOLA3",
+"Bus": "ZOE202",
+"Conductor": "1098468424",
+"Recorrido": "T3-2",
+"HoraSalidaEstimada": "13:10:00",
+"HoraSalidaReal": "13:20:00",
+"HorarioEstimado": {
+"ST1": "13:30:00",
+"ST2": "14:00:48",
+"ST3": "14:06:55",
+"ST4": "14:10:26",
+"ST5": "14:20:12"
+},
+"HorarioReal": {
+"ST1": "13:40:32",
+"ST2": "14:04:32"
+},
+"EstaTerminado": false,
+"ProximaParada": 2
+},
+{
+"Clave": "HOLA3",
+"Bus": "ZOE203",
+"Conductor": "1096544654",
+"Recorrido": "T3-3",
+"HoraSalidaEstimada": "13:20:00",
+"HoraSalidaReal": "13:30:00",
+"HorarioEstimado": {
+"ST1": "13:40:00",
+"ST2": "14:10:48",
+"ST3": "14:16:55",
+"ST4": "14:20:26",
+"ST5": "14:30:12"
+},
+"HorarioReal": {
+"ST1": "12:50:32"
+},
+"EstaTerminado": false,
+"ProximaParada": 0
+}
+]

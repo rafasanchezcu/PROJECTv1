@@ -28,6 +28,8 @@
 
 .red { color: yellow;  background-color: red !important;}
 .blue { color: blue;  }
+.red1 { color: red;  background-color: red !important;}
+.green { color: green;  background-color: green !important;}
 
 body, html {
   margin: 0;
