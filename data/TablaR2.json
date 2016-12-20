@@ -5,7 +5,7 @@
 "Conductor": "1098755547",
 "Recorrido": "T3-1",
 "HoraSalidaEstimada": "13:00:00",
-"HoraSalidaReal": "13:10:00",
+"HoraSalidaReal": "13:00:00",
 "HorarioEstimado": {
 "ST1": "13:24:24",
 "ST2": "13:50:47",
@@ -29,7 +29,7 @@
 "Conductor": "1098468424",
 "Recorrido": "T3-2",
 "HoraSalidaEstimada": "13:10:00",
-"HoraSalidaReal": "13:20:00",
+"HoraSalidaReal": "13:10:00",
 "HorarioEstimado": {
 "ST1": "13:30:00",
 "ST2": "14:00:48",

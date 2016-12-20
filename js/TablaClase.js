@@ -10,11 +10,9 @@ app.controller('MainCtrl', ['$scope', '$http','i18nService', function ($scope, $
     $scope.gridOptions.data.splice(index, 1);
   };
 */
+ $scope.cellClicked = function (row, col){ alert('Ruta: '+row.entity.Recorrido +'\n'+'Hora Salida Estimada: '+row.entity.HoraSalidaEstimada +'\n'+  'Hora Salida Real: '+ row.entity.HoraSalidaReal);};
+ $scope.cellClicked1 = function (row, col){ alert('Ruta: '+row.entity.Recorrido +'\n'+'Hora LLegada Estimada E1: '+row.entity.HorarioEstimado.ST1 +'\n'+  'Hora LLegada Real E1: '+ row.entity.HorarioReal.ST1);};$scope.cellClicked2 = function (row, col){ alert('Ruta: '+row.entity.Recorrido +'\n'+'Hora LLegada Estimada E2: '+row.entity.HorarioEstimado.ST2 +'\n'+  'Hora LLegada Real E2: '+ row.entity.HorarioReal.ST2);};$scope.cellClicked3 = function (row, col){ alert('Ruta: '+row.entity.Recorrido +'\n'+'Hora LLegada Estimada E3: '+row.entity.HorarioEstimado.ST3 +'\n'+  'Hora LLegada Real E3: '+ row.entity.HorarioReal.ST3);};$scope.cellClicked4 = function (row, col){ alert('Ruta: '+row.entity.Recorrido +'\n'+'Hora LLegada Estimada E4: '+row.entity.HorarioEstimado.ST4 +'\n'+  'Hora LLegada Real E4: '+ row.entity.HorarioReal.ST4);};$scope.cellClicked5 = function (row, col){ alert('Ruta: '+row.entity.Recorrido +'\n'+'Hora LLegada Estimada E5: '+row.entity.HorarioEstimado.ST5 +'\n'+  'Hora LLegada Real E5: '+ row.entity.HorarioReal.ST5);};
 
- $scope.cellClicked = function (row, col){
-  alert('Hora LLegada Estimada: '+row.entity.HorarioEstimado.ST2 +'\n'+  'Hora LLegada Real: '+ row.entity.HorarioReal.ST2);
-  };
-  
     
     $scope.gridOptions = {
     
@@ -38,48 +36,59 @@ app.controller('MainCtrl', ['$scope', '$http','i18nService', function ($scope, $
           }
         }
       },
-      {field: 'HoraSalidaEstimada', name:'H.S.E', width: '7%'},
-      {field: 'HoraSalidaReal', name:'H.S.R', width: '7%'},
-      {field: 'HorarioEstimado.ST1', name:'H.E-est1', visible:false, width: '8%'},
-      {field: 'HorarioReal.ST1', name:'HR-est1', width: '8%',
-        cellClass: function(grid, row, col, rowRenderIndex, colRenderIndex) {
-          if (grid.getCellValue(row,col) > row.entity.HorarioEstimado.ST1) {
-            return 'red';
-          }
-        }
-      },
-      {field: 'HorarioEstimado.ST2', name:'H.E-est2', visible: false, width: '8%'},
-      {field: 'HorarioReal.ST2', name:'HR-est2', width: '8%',
-      cellClass: function(grid, row, col, rowRenderIndex, colRenderIndex) {
-          if (grid.getCellValue(row,col) > row.entity.HorarioEstimado.ST2) {
+      {field: 'HoraSalidaEstimada', name:'H.S.E',  visible:false, width: '7%'},
+      {field: 'HoraSalidaReal', name:'H.S.R', width: '7%',
+     cellClass: function(grid, row, col, rowRenderIndex, colRenderIndex) {
+          if (grid.getCellValue(row,col) > row.entity.HoraSalidaEstimada) {
             return 'red';
           }
         }, 
         cellTemplate:'<div ng-click="grid.appScope.cellClicked(row,col)"  class="ui-grid-cell-contents" title="TOOLTIP">{{COL_FIELD CUSTOM_FILTERS}}</div>'
       },
+      {field: 'HorarioEstimado.ST1', name:'H.E-est1', visible:false, width: '8%'},
+      {field: 'HorarioReal.ST1', name:'H.R.E1', width: '8%',
+        cellClass: function(grid, row, col, rowRenderIndex, colRenderIndex) {
+          if (grid.getCellValue(row,col) > row.entity.HorarioEstimado.ST1) {
+            return 'red';
+          }
+        },
+        cellTemplate:'<div ng-click="grid.appScope.cellClicked1(row,col)"  class="ui-grid-cell-contents" title="TOOLTIP">{{COL_FIELD CUSTOM_FILTERS}}</div>'
+      },
+      {field: 'HorarioEstimado.ST2', name:'H.E-est2', visible: false, width: '8%'},
+      {field: 'HorarioReal.ST2', name:'H.R.E2', width: '8%',
+      cellClass: function(grid, row, col, rowRenderIndex, colRenderIndex) {
+          if (grid.getCellValue(row,col) > row.entity.HorarioEstimado.ST2) {
+            return 'red';
+          }
+        }, 
+        cellTemplate:'<div ng-click="grid.appScope.cellClicked2(row,col)"  class="ui-grid-cell-contents" title="TOOLTIP">{{COL_FIELD CUSTOM_FILTERS}}</div>'
+      },
       {field: 'HorarioEstimado.ST3', name:'H.E-est3', visible: false, width: '8%'},
-      {field: 'HorarioReal.ST3', name:'HR-est3', width: '8%',
+      {field: 'HorarioReal.ST3', name:'H.R.E3', width: '8%',
     cellClass: function(grid, row, col, rowRenderIndex, colRenderIndex) {
           if (grid.getCellValue(row,col) > row.entity.HorarioEstimado.ST3) {
             return 'red';
           }
-        }
+        },
+        cellTemplate:'<div ng-click="grid.appScope.cellClicked3(row,col)"  class="ui-grid-cell-contents" title="TOOLTIP">{{COL_FIELD CUSTOM_FILTERS}}</div>'
       },
       {field: 'HorarioEstimado.ST4', name:'H.E-est4', visible: false, width: '8%'},
-      {field: 'HorarioReal.ST4', name:'HR-est4', width: '8%', 
+      {field: 'HorarioReal.ST4', name:'H.R.E4', width: '8%', 
     cellClass: function(grid, row, col, rowRenderIndex, colRenderIndex) {
           if (grid.getCellValue(row,col) > row.entity.HorarioEstimado.ST1) {
             return 'red';
           }
-        }
+        },
+        cellTemplate:'<div ng-click="grid.appScope.cellClicked4(row,col)"  class="ui-grid-cell-contents" title="TOOLTIP">{{COL_FIELD CUSTOM_FILTERS}}</div>'
       },
       {field: 'HorarioEstimado.ST5', name:'H.E-est5', visible: false, width: '8%'},
-      {field: 'HorarioReal.ST5', name:'HR-est5', width: '8%', 
+      {field: 'HorarioReal.ST5', name:'H.R.E5', width: '8%', 
     cellClass: function(grid, row, col, rowRenderIndex, colRenderIndex) {
           if (grid.getCellValue(row,col) > row.entity.HorarioEstimado.ST1) {
             return 'red';
           }
-        }
+        },
+        cellTemplate:'<div ng-click="grid.appScope.cellClicked5(row,col)"  class="ui-grid-cell-contents" title="TOOLTIP">{{COL_FIELD CUSTOM_FILTERS}}</div>'
       }
 
     ],
@@ -120,5 +129,4 @@ app.controller('MainCtrl', ['$scope', '$http','i18nService', function ($scope, $
   };
   window.setInterval(refrescarTiempo,5000);
 }]);
-
 
