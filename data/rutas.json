@@ -1,4 +1,4 @@
-[ {"nombre":"R1","color":"00bfa5","categoria":["Carrera 15","Autopista"],"descripcion":"Ruta de la excelencia","longitud":5,"paradas":[
+[ {"nombre":"R1","color":"FF5722","categoria":["Carrera 15","Autopista"],"descripcion":"Ruta de la excelencia","longitud":5,"paradas":[
   {"nombre":"Estacion 1","distancia":0,"coordenadas":{"latitud":7.1372035,"longitud":-73.1223754}},
 	{"nombre":"Estacion 2","distancia":3100,"coordenadas":{"latitud":7.107844,"longitud":-73.116074}},
   {"nombre":"Estacion 3","distancia":6100,"coordenadas":{"latitud":7.095459,"longitud":-73.110635}},
@@ -8,7 +8,7 @@
 	{"nombre":"Estacion 7","distancia":8700,"coordenadas":{"latitud":7.0667097,"longitud":-73.0997972}}
 ]
 },
-  {"nombre":"R2","color":"00b8d4","categoria":["Carrera 33","Autopista"],"descripcion":"De cabecer a la uis","longitud":7,"paradas":[
+  {"nombre":"R2","color":"00E677","categoria":["Carrera 33","Autopista"],"descripcion":"De cabecer a la uis","longitud":7,"paradas":[
     {"nombre":"Estacion 1 ","distancia":0,"coordenadas":{"latitud":7.1372035,"longitud":-73.1223754}},
   	{"nombre":"Estacion 2","distancia":3100,"coordenadas":{"latitud":7.107844,"longitud":-73.116074}},
     {"nombre":"Estacion 3","distancia":6100,"coordenadas":{"latitud":7.095459,"longitud":-73.110635}},
@@ -24,7 +24,7 @@
   	{"nombre":"Estacion 5","distancia":7400,"coordenadas":{"latitud":7.107844,"longitud":-73.116074}},
     {"nombre":"Estacion 6","distancia":7800,"coordenadas":{"latitud":7.1372035,"longitud":-73.1223754}}
     ]},
-  {"nombre":"R3","color":"0091ea","categoria":["Carrera 27","Autopista"],"descripcion":"De piedecuesta a la uis","longitud":3,"paradas":[
+  {"nombre":"R3","color":"2245B5","categoria":["Carrera 27","Autopista"],"descripcion":"De piedecuesta a la uis","longitud":3,"paradas":[
     {"nombre":"Estacion 1","distancia":0},
   	{"nombre":"Estacion 2","distancia":3100},
     {"nombre":"Estacion 3","distancia":6100},

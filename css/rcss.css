@@ -4,18 +4,12 @@
   box-sizing: border-box;
 }
 
-
-#cajaletrero1{
-  position: relative;
-  z-index: 1;
-  top: 20px;
-  width: 55%;
-  height: 38px;
-  font-size: xx-large !important; 
-  background-color: #11EF96;
-  color: white;
-  text-align: center;
-  
+.bloque1 {
+  display: flex;
+  font-size: 3em;
+  color: #515151;
+  padding-left: 24px;
+  font-stretch: condensed;
 }
 
 .datos {
@@ -29,6 +23,20 @@
   transform: translateY(-50%);
   padding-left: 12px;
   font-stretch: condensed;
+}
+
+.datof {
+  position: absolute;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin-right: 12px;
+  font-stretch: condensed;
+  z-index: 2;
 }
 
 .nombreRuta {
@@ -93,7 +101,7 @@ a {
 }
 
 .timeline, .timeline0 {
-  height: 5em;
+  height: 72px;
 }
 
 .timeline, .timelineM {
@@ -101,7 +109,7 @@ a {
 }
 
 .timelineM {
-  height: 10em;
+  height: 132px;
 }
 .timelineM .estacion {
   top: -6em;
@@ -111,6 +119,39 @@ a {
 }
 .timelineM .line {
   overflow-x: auto;
+}
+.timelineM #detalle {
+  position: absolute;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 2;
+  right: 25px;
+  font-size: 3.2em;
+  color: #b5b5b5;
+  cursor: pointer;
+}
+.timelineM #detalle:hover {
+  color: #1bce7c;
+}
+.timelineM .cerrar {
+  position: absolute;
+  right: -8px;
+  top: 0px;
+  width: 36px;
+  height: 36px;
+  font-size: 20px;
+  color: #b5b5b5;
+  text-align: center;
+  z-index: 2;
+  cursor: pointer;
+}
+.timelineM .cerrar:hover {
+  color: #212121;
 }
 
 .caja {

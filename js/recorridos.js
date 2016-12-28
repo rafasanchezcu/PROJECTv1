@@ -5,24 +5,23 @@
 
 
 function Recorridos(nombreRuta,disEE,paradas,nid) {
-  var nEstaciones=paradas.length;
-
-  var nombreEstaciones=[];
+  var nEstaciones=paradas.length,
+      nombreEstaciones=[];
   //creamos las estaciones de la cabecera
   for (var i = 0; i < nEstaciones; i++) {
     nombreEstaciones.push("<div class=estacion>"+paradas[i].nombre+"</div>")
     //lineG.append("<li class=estacion1></li>")
   }
   var cajaRR=$(".cajaRR");
-  cajaRR.append("<div class=cajaR"+nid+"><div class=timelineM><div id=recorrido class=line><ol class=linei>"+nombreEstaciones.join("")+"</ol> </div> <div class=nombreRuta> <h1>"+nombreRuta+"</h1></div></div></div></div>");
+  cajaRR.append("<div class=cajaR"+nid+"><div class=timelineM><div id=recorrido class=line><ol class=linei>"+nombreEstaciones.join("")+"</ol> </div> <div class=nombreRuta> <h1>"+nombreRuta+"</h1></div><a href=unicaRuta.html?ruta="+nombreRuta+" target=_blank><i class=material-icons id=detalle >launch</i></a><div class=cerrar onclick=it.removeRecorrido(+id+)>x</div></div></div></div>");
   $(".prev").addClass("inactive");
 
       var cajaR=$(".cajaR"+nid);
-      this.timelineM=cajaR.children(".timelineM"),
-      datos=this.timelineM.children(".datos"),
-      line=this.timelineM.children(".line"),
-      lineG=line.children(".linei");
-      vectorEstaciones=lineG.children(".estacion");
+      this.timelineM = cajaR.children(".timelineM"),
+      datos = this.timelineM.children(".datos"),
+      line = this.timelineM.children(".line"),
+      lineG = line.children(".linei");
+      vectorEstaciones = lineG.children(".estacion");
       //console.log(vectorEstaciones);
     for (var i = 0; i < nEstaciones; i++) {
           setPosTimelineE(i,disEE,vectorEstaciones.eq(i));
@@ -49,11 +48,11 @@ function Recorridos(nombreRuta,disEE,paradas,nid) {
 /*
 Estas funciones se encargan de permitir el desplazamiento horizontal en la linea de tiempo
 */
-var timeline=cajaR.children(".timeline");
-    this.timelineM=cajaR.children(".timelineM");
+var timeline = cajaR.children(".timeline");
+    this.timelineM = cajaR.children(".timelineM");
     setTimelineWidth(disEE,timeline,nEstaciones);
-    timelineWidth=setTimelineWidth(disEE,this.timelineM,nEstaciones);
-var longitudTimeline=timelineWidth; //por algun tipo de conflicto este valor se modifica, por lo que es necesario volverlo a asignar a una variable con diferente nombre
+    timelineWidth = setTimelineWidth(disEE,this.timelineM,nEstaciones),
+    longitudTimeline = timelineWidth; //por algun tipo de conflicto este valor se modifica, por lo que es necesario volverlo a asignar a una variable con diferente nombre
 
     timeline.addClass('loaded');
 //parte de este codigo es extraido de la pagina https://codyhouse.co/gem/horizontal-timeline/
@@ -144,16 +143,16 @@ $("#btn6").click(function(){
     cajaR.append(recorridos.join(''));
     }
     */
-    this.agregarBuses=function (n,info) {
-      var line=this.timelineM.children(".line"),
-          lineG=line.children(".linei");
+    this.agregarBuses = function (n,info) {
+      var line = this.timelineM.children(".line"),
+          lineG = line.children(".linei");
 
       if(n==1){
         lineG.append("<li class=bus>"+info+"</li>");
       }
-      else if(n>=2){
+      else if(n >= 2){
         //agregando todos los buses de los que se dispone y ocultandolos para usarlos cuando sea necesario
-        var buses=[];
+        var buses = [];
         //se guarda primero la informacion del DOM en un array debido al costo computacion elevado de la funcion "append" de jQuery
 
           for (var i = 0; i < n; i++) {
@@ -166,7 +165,7 @@ $("#btn6").click(function(){
     }
   //Se encarga de eliminar un recorrido, una vez que el bus ha completado su trayecto y ya no se encuentra en el itinerario
   //se usa un indice para este evento ya que es posible que un bus adelante a otro por lo que no siempre el primero en entrar es el primero en salir
-  this.eliminarBus=function (indice) {
+  this.eliminarBus = function (indice) {
     var line=this.timelineM.children(".line"),
         lineG=line.children(".linei"),
         buses=lineG.children(".bus");

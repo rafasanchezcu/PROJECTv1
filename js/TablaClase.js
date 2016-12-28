@@ -130,3 +130,5 @@ app.controller('MainCtrl', ['$scope', '$http','i18nService', function ($scope, $
   window.setInterval(refrescarTiempo,5000);
 }]);
 
+
+

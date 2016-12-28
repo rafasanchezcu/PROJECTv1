@@ -10,7 +10,7 @@
 #grid1{
   position: relative;
   z-index: 1;
-  top: 100px;
+  top: 125px;
 }
 
 #cajaletrero{
@@ -23,13 +23,14 @@
   background-color: #11EF96;
   color: white;
   text-align: center;
+  border-radius: 15px;
   
 }
 
-.red { color: yellow;  background-color: red !important;}
+.red { color: #51F051;  background-color: red !important;}
 .blue { color: blue;  }
 .red1 { color: red;  background-color: red !important;}
-.green { color: green;  background-color: green !important;}
+.green { color: #51F051;  background-color: #51F051 !important;}
 
 body, html {
   margin: 0;
@@ -43,3 +44,42 @@ body, html {
 
 
 /*FIN TABLAS*/
+.ui-grid {
+  border: 1px solid #51f051;
+  box-sizing: content-box;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.ui-grid-header {
+  border-bottom: 1px solid #51f051;
+  box-sizing: border-box;
+}
+
+.ui-grid-header-cell {
+  position: relative;
+  box-sizing: border-box;
+  background-color: inherit;
+  border-right: 1px solid;
+  border-color: #51f051;
+ 
+}
+
+.ui-grid-cell {
+  overflow: hidden;
+  float: left;
+  background-color: inherit;
+  border-right: 1px solid;
+  border-color: #51f051;
+  box-sizing: border-box;
+}
+
+.ui-grid-row .ui-grid-cell.ui-grid-row-header-cell {
+  background-color: #f0f0ee;
+  border-bottom: solid 1px #51f051;
+}

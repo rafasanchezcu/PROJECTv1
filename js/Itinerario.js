@@ -1,7 +1,7 @@
 
 /*
 Author: Antonio Cortes
-esta clase se usa para dministrar los recorridos, cuando solo se cuenta con una ruta
+esta clase se usa para administrar los recorridos, cuando solo se cuenta con una ruta
 */
 function Itinerario(disEE,paradas) {
   var nEstaciones=paradas.length;
@@ -81,16 +81,19 @@ timeline.find('.mover').on('click', '.prev', function(event){
 
 */
 //funciones de los botones
+var contadorBusAgregado = 10;
 $("#btn1").click(function(){
-    it.agregarRecorrido("hola todos");
-    timeline0=caja.children(".timeline0");
+    it.agregarRecorrido(contadorBusAgregado,"hola"+contadorBusAgregado,contadorBusAgregado);
+    contadorBusAgregado++;
+    timeline0 = caja.children(".timeline0");
 });
 $("#btn2").click(function(){
     it.eliminarRecorrido(0);
-    timeline0=caja.children(".timeline0");
+    timeline0 = caja.children(".timeline0");
 });
 $("#btn3").click(function(){
-    $('.bus').eq(0).css('background-image','url(../img/bus-markerv.svg)');
+    $('#recorrido2 .bus').eq(0).css('background-image','url(../img/bus-markern.svg)');
+    
 });
 a=0;
 $("#btn4").click(function(){
@@ -140,7 +143,7 @@ $("#btn6").click(function(){
   //se encarga de agregar un recorrido al final, info se refiere a la hora de salida del bus
   this.agregarRecorrido = function(id, horaS, idBus){
     buses = caja.append("<div class=timeline0 id=recorrido"+id+"><div class=line><ol class=linei style=width:"+timelineWidth+"px;>"+estBus+"<li class=bus>"+idBus+"</li></div> <div class=datos>hora de salida:</br>"+horaS+"</div><div class=cerrar onclick=it.removeRecorrido("+id+")>x</div></div>");
-    console.log(id);
+    //console.log(id);
     busesAceptados.push(id);
 
   }
@@ -210,16 +213,35 @@ $("#btn6").click(function(){
           elemento.css('transform','translateX(-50%)');
   }
   //modificamos la posicion de los buses en la linea de tiempo y se transladan -50% en x para lograr un centrado relativo
-  function setPosTimelineB(elemento,distancia) {
+  function actualizarBus(elementoPadre,distancia) {
       /*  var distance = daydiff(timelineComponents['timelineDates'][0], timelineComponents['timelineDates'][i]),
           distanceNorm = Math.round(distance/timelineComponents['eventsMinLapse']) + 2;*/
-
-          dis=Math.round(distancia);
+          //TTolerancia = 15;   este margen de tiempo se usa para aplicar los criteros sobre los que se define si un conductor va tarde, muy rapido o bien entre todo el recorrido.
+          //TToleranciaEstaciones = 10;   este margen de tiempo se usa para aplicar los criteros sobre los que se define si un conductor va tarde, muy rapido o bien entre cada estacion.
+          elemento = elementoPadre.find(".bus");
+          dis = Math.round(distancia);
           //console.log(distancia +"left "+dis);
           //console.log("bus"+disNormal);
           elemento.css('left', dis+'px');
           elemento.css('transform','translateX(-50%)');
           elemento.css('transition','left 1s linear');
+
+        /*funcion para modificar el color 
+          //TTolerancia = 15;   este margen de tiempo se usa para aplicar los criteros sobre los que se define si un conductor va tarde, muy rapido o bien entre todo el recorrido.
+          //TToleranciaEstaciones = 10;   este margen de tiempo se usa para aplicar los criteros sobre los que se define si un conductor va tarde, muy rapido o bien entre cada estacion.
+
+        $('#recorrido2 .bus').eq(0).css('background-image','url(../img/bus-markerv.svg)');
+          *
+      // funcion que modifica el estado o color del bus, dependiendo de si va tarde, muy rapido o bien
+      TRecorrido: el tiempo que el bus lleva en el recorrido
+      lo necesito > TEstimado: el tiempo que se espera le halla tomado al bus llegar a ese nivel avance, calcula en base al tiempo de avance y el porcentaje de recorrido total realizado
+      if (TRecorrido > TEstimado+TToleranciaEstaciones) {
+        $('#recorrido2 .bus').eq(0).css('background-image','url(../img/bus-markern.svg)');
+      }else if(TRecorrido < TEstimado-TToleranciaEstaciones){
+        $('#recorrido2 .bus').eq(0).css('background-image','url(../img/bus-markerm.svg)');
+      }else{
+        $('#recorrido2 .bus').eq(0).css('background-image','url(../img/bus-markerv.svg)');
+      } */
   }
 
 
