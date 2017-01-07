@@ -1,0 +1,28 @@
+[ 
+{"nombre":"R1",
+	"color":"FF5722",
+	"categoria":["Carrera 15","Autopista"],
+	"descripcion":"Ruta de la excelencia",
+	"longitud":5,
+    "paradas":
+    [
+     {"nombre":"Estacion 1","distancia":0,"coordenadas":{"Latitud":7.1372035,"Longitud":-73.1223754}},
+	 {"nombre":"Estacion 2","distancia":3100,"coordenadas":{"Latitud":7.107844,"Longitud":-73.116074}},
+     {"nombre":"Estacion 3","distancia":6100,"coordenadas":{"Latitud":7.095459,"Longitud":-73.110635}},
+	 {"nombre":"Estacion 4","distancia":6800,"coordenadas":{"Latitud":7.0846673,"Longitud":-73.1079612}},
+	 {"nombre":"Estacion 5","distancia":7400,"coordenadas":{"Latitud":7.070489,"Longitud":-73.104748}},
+     {"nombre":"Estacion 6","distancia":7800,"coordenadas":{"Latitud":7.069408,"Longitud":-73.103893}},
+	 {"nombre":"Estacion 7","distancia":8700,"coordenadas":{"Latitud":7.0667097,"Longitud":-73.0997972}}
+    ],
+    "polilinea": 
+    [
+    	{"Latitud":7.1372035,"Longitud":-73.1223754},
+    	{"Latitud":7.107844,"Longitud":-73.116074},
+    	{"Latitud":7.095459,"Longitud":-73.110635},
+    	{"Latitud":7.0846673,"Longitud":-73.1079612},
+    	{"Latitud":7.070489,"Longitud":-73.104748},
+    	{"Latitud":7.069408,"Longitud":-73.103893},
+    	{"Latitud":7.0667097,"Longitud":-73.0997972}
+    ]
+}
+]

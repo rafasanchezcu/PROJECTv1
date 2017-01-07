@@ -122,7 +122,7 @@ app.controller('MainCtrl', ['$scope', '$http','i18nService', function ($scope, $
   i18nService.setCurrentLang('es');
 
   function refrescarTiempo() {
-  $http.get("../data/Tabla"+rutaSeleccionada+".json")
+  $http.get("http://localhost:8000/data/Tabla"+rutaSeleccionada+".json")
     .success(function(data) {
       $scope.gridOptions.data = data;
     });  

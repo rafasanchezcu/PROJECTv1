@@ -1,0 +1,18 @@
+[
+    {
+      "Clave": "ST1",
+      "Nombre": "Parada. Temprana",
+      "Coordenada": {
+        "Latitud": 7.002608,
+        "Longitud": -73.055068
+      }
+    },
+    {
+      "Clave": "ST2",
+      "Nombre": "Parada. Espanolita",
+      "Coordenada": {
+        "Latitud": 7.017094,
+        "Longitud": -73.057532
+      }
+    }
+  ]

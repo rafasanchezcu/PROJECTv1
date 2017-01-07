@@ -154,8 +154,8 @@ $("#btn6").click(function(){
   //de forma abrupta
   this.removeRecorrido = function(id) {
     index = busesAceptados.indexOf(""+id);
-    if (busesAceptados.indexOf(""+id) > -1) {
-    busesAceptados.splice(busesAceptados.indexOf(""+id), 1);
+    if (index > -1) {
+    busesAceptados.splice(index, 1);
     }
     bus = caja.find("#recorrido"+id);
     //bus.css('height','0px');

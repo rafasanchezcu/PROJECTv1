@@ -2525,6 +2525,7 @@ input[type="radio"] {
   /* 1 */
   padding: 0;
   /* 2 */
+  
 }
 
 /**
@@ -7983,6 +7984,19 @@ body, html {
  * background: $color-1
  * &:hover
  *   background: $color-2 */
+ .derecha {
+  position: absolute;
+  background-color: white;
+  width: 150px;
+  height: 80px;
+  right: 0.5%;
+  top: 0.9%;
+  border-radius: 15px;
+  text-align: center;
+  z-index: 1;
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.2);
+}
+
 .izquierda {
   position: absolute;
   font-size: 20px;
@@ -7993,6 +8007,7 @@ body, html {
   transition: left 1s;
   box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  border-radius: 15px;
 }
 .izquierda .flecha {
   position: absolute;
@@ -8024,6 +8039,7 @@ body, html {
   box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.2);
   overflow-y: auto;
   overflow-x: hidden;
+  border-radius: 15px;
 }
 .izquierda .bloque0 {
   width: 280px;
@@ -8270,6 +8286,7 @@ section #map {
   background-size: 32px 64px;
   background-image: url("../img/cd-icon-controller.svg");
 }
+
 #map-zoom-in:hover, #map-zoom-out:hover {
   background-color: #3f51b5;
 }
@@ -8285,10 +8302,12 @@ section #map {
 }
 
 .cajaletrero{
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.2);
   width: 100%;
   height: 38px;
-  border-radius: 2%;
+  border-radius: 15px;
   background-color: #11EF96;
  color: white;
  text-align: center;
 }
+

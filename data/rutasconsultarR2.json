@@ -1,0 +1,26 @@
+[
+  {
+    "nombre":"R2",
+    "color":"00E677",
+    "categoria":["Carrera 33","Autopista"],
+    "descripcion":"De cabecer a la uis",
+    "longitud":7,"paradas":
+  [
+    {"nombre":"Estacion 1 ","distancia":0,"coordenadas":{"Latitud":7.066655,"Longitud":-73.099632}},
+  	{"nombre":"Estacion 2","distancia":3100,"coordenadas":{"Latitud":7.07066,"Longitud":-73.104938}},
+    {"nombre":"Estacion 3","distancia":6100,"coordenadas":{"Latitud":7.075204,"Longitud":-73.108315}},
+  	{"nombre":"Estacion 4","distancia":6800,"coordenadas":{"Latitud":7.078735,"Longitud":-73.108101}},
+  	{"nombre":"Estacion 5","distancia":7400,"coordenadas":{"Latitud":7.084474,"Longitud":-73.107862}},
+    {"nombre":"Estacion 6","distancia":7800,"coordenadas":{"Latitud":7.090184,"Longitud":-73.108926}},
+  	{"nombre":"Estacion 7","distancia":8700,"coordenadas":{"Latitud":7.09548,"Longitud":-73.11048}},
+    {"nombre":"Estacion 7","distancia":9200,"coordenadas":{"Latitud":7.09548,"Longitud":-73.11048}},
+    {"nombre":"Estacion 6","distancia":0,"coordenadas":{"Latitud":7.090184,"Longitud":-73.108926}},
+  	{"nombre":"Estacion 5","distancia":3100,"coordenadas":{"Latitud":7.084474,"Longitud":-73.107862}},
+    {"nombre":"Estacion 4","distancia":6100,"coordenadas":{"Latitud":7.078735,"Longitud":-73.108101}},
+  	{"nombre":"Estacion 3","distancia":6800,"coordenadas":{"Latitud":7.075204,"Longitud":-73.108315}},
+  	{"nombre":"Estacion 2","distancia":7400,"coordenadas":{"Latitud":7.07066,"Longitud":-73.104938}},
+    {"nombre":"Estacion 1","distancia":7800,"coordenadas":{"Latitud":7.066655,"Longitud":-73.099632}}
+  ]
+  }
+
+]

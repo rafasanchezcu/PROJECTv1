@@ -3,22 +3,21 @@
 
 */
 
-
 function Recorridos(nombreRuta,disEE,paradas,nid) {
-  var nEstaciones=paradas.length,
-      nombreEstaciones=[];
+  var nEstaciones = paradas.length,
+      nombreEstaciones = [];
   //creamos las estaciones de la cabecera
   for (var i = 0; i < nEstaciones; i++) {
     nombreEstaciones.push("<div class=estacion>"+paradas[i].nombre+"</div>")
     //lineG.append("<li class=estacion1></li>")
   }
-  var cajaRR=$(".cajaRR");
-  cajaRR.append("<div class=cajaR"+nid+"><div class=timelineM><div id=recorrido class=line><ol class=linei>"+nombreEstaciones.join("")+"</ol> </div> <div class=nombreRuta> <h1>"+nombreRuta+"</h1></div><a href=unicaRuta.html?ruta="+nombreRuta+" target=_blank><i class=material-icons id=detalle >launch</i></a><div class=cerrar onclick=it.removeRecorrido(+id+)>x</div></div></div></div>");
+  
+  $(".cajaRR").append("<div class=cajaR"+nid+"><div class=timelineM><div id=recorrido class=line><ol class=linei>"+nombreEstaciones.join("")+"</ol> </div> <div class=nombreRuta> <h1>"+nombreRuta+"</h1></div><a href=unicaRuta.html?ruta="+nombreRuta+" target=_blank><i class=material-icons id=detalle >launch</i></a><input id=cerrar type=radio value="+nid+"><label class=cerrar id=cerrar for=cerrar>x</label></div></div></div>");
   $(".prev").addClass("inactive");
 
-      var cajaR=$(".cajaR"+nid);
-      this.timelineM = cajaR.children(".timelineM"),
-      datos = this.timelineM.children(".datos"),
+  var cajaR = $(".cajaR"+nid);
+      this.timelineM = cajaR.children(".timelineM");
+  var datos = this.timelineM.children(".datos"),
       line = this.timelineM.children(".line"),
       lineG = line.children(".linei");
       vectorEstaciones = lineG.children(".estacion");
@@ -104,8 +103,6 @@ $("#btn6").click(function(){
     $('.lineT').eq(a).css('width','120px');
     a++;
 });
-
-
 
 //funciopn encarga de mostrar los nombre de las estaciones
   function agregarCabecera(nEstaciones,estaciones){

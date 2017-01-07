@@ -1,5 +1,8 @@
 //creando una instancia de factory, para crear a partir de ella indefinidos marker de estaciones y rutas
-var factory = new markerPaqueteFactory(),
+var factory = new markerPaqueteFactory();
+var factory1 = new eliminarmarkerPaqueteFactory();
+var factory2 = new markerPaqueteFactoryestacionesyparadas();
+var factory3 = new eliminarmarkerPaqueteFactoryestacionesyparadas();
     mapa = new initMap();
 jQuery(document).ready(function($){
 
@@ -10,21 +13,8 @@ jQuery(document).ready(function($){
            $.rutas = data;
             //Agrega las rutas luego de filtrarlas a partir de sus caracteristicas mas relevantes
            agregarRutas(data,data[0].categoria);
-           
-
-
-
-         });
-
-       $.getJSON("http://localhost:8000/data/coordenadas.json").
-           success(function(data) {
-            $.coordenadas = data;
-            mapa.graficarEstaciones(data);
-          });
-
-
-
-  });
+           });
+});
 
 
 

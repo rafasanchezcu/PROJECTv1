@@ -1,11 +1,12 @@
 
 
   jQuery(document).ready(function($){
-
+    
     //capturamos la url, y obtenemos los valores de las rutas que el usuario desea monitorizar
     var rutaSeleccionada = window.location.search.split("=")[1];
     console.log(rutaSeleccionada);
     $(".bloque1").html("RUTA "+rutaSeleccionada);
+    
     $.getJSON("http://localhost:8000/data/rutas.json").
       success(function(data) {
       $.rutas = data;

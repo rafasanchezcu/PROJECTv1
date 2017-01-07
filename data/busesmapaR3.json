@@ -1,4 +1,4 @@
-[{"Ruta":"R1","HoraS":0,"coordenadas":[
+[{"Ruta":"R3","HoraS":0,"coordenadas":[
 	{"latitud":7.0704193901191745,"longitud":-73.1049097579193,"id":0},
 	{"latitud":7.0704193901191745,"longitud":-73.1049097579193,"id":0},
 	{"latitud":7.0704193901191745,"longitud":-73.1049097579193,"id":0},
@@ -74,7 +74,7 @@
 {"latitud":7.070951752307248,"longitud":-73.10538182670592,"id":3}
 ]
 },
-{"Ruta":"R1","HoraS":20,"coordenadas":
+{"Ruta":"R3","HoraS":20,"coordenadas":
  [ 	{"latitud":7.066719455965308,"longitud":-73.09987793380736,"id":2},
  {"latitud":7.066719455965308,"longitud":-73.09987793380736,"id":2},
  {"latitud":7.066719455965308,"longitud":-73.09987793380736,"id":2},
